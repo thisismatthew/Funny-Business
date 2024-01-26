@@ -16,6 +16,8 @@ public class MouseBehaviour : MonoBehaviour
         Cursor.visible = false;
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos.z = 0;
+        pos.x += .2f;
+        pos.y -= .2f;
         this.transform.position = pos;
 
     }
