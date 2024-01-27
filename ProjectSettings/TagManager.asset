@@ -38,6 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2492336709
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Mouse
+    uniqueID: 2230254527
+    locked: 0
+  - name: Frame
+    uniqueID: 208201883
     locked: 0

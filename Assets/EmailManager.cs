@@ -1,12 +1,27 @@
 using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
+
 
 public class EmailManager : MonoBehaviour
 {
+    public int time = 0;
     public static EmailManager Instance { get; private set; }
     public TextMeshProUGUI email_text;
+    public GameObject emailDisplay;
     public Image emailBckground;
+    public string CurrentId;
+    public Transform contentTransform;
+    private Dictionary<string, List<string>> emailCsv;
+
+    void Start()
+    {
+        emailCsv = TSVReader.ReadTSV("emails.txt");
+        CreateEmailsonStart(emailCsv);
+    }
+
     void Awake()
     {
         if (Instance == null)
@@ -20,22 +35,58 @@ public class EmailManager : MonoBehaviour
         }
     }
 
+    public void SetEmailId(string id)
+    {
+        CurrentId = id;
+        DisplayContentForIcon(CurrentId);
+    }
+
     public void DisplayContentForIcon(string id)
     {
-        if (id == "a") {
-            email_text.text = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nosti, credo, illud: Nemo pius est, qui pietatem-; Certe, nisi voluptatem tanti aestimaretis. Sed quid ages tandem, si utilitas ab amicitia, ut fit saepe, defecerit?
-
-<b>Sed ille, ut dixi, vitiose. Materiam vero rerum et copiam apud hos exilem, apud illos uberrimam reperiemus.</b> Quae fere omnia appellantur uno ingenii nomine, easque virtutes qui habent, ingeniosi vocantur. Placet igitur tibi, Cato, cum res sumpseris non concessas, ex illis efficere, quod velis? Duo Reges: constructio interrete. Quis hoc dicit?
-
-Huius, Lyco, oratione locuples, rebus ipsis ielunior. Hoc loco discipulos quaerere videtur, ut, qui asoti esse velint, philosophi ante fiant. Idemne, quod iucunde? Respondent extrema primis, media utrisque, omnia omnibus. Theophrasti igitur, inquit, tibi liber ille placet de beata vita? Teneo, inquit, finem illi videri nihil dolere. Aliter enim explicari, quod quaeritur, non potest. Modo etiam paulum ad dexteram de via declinavi, ut ad Pericli sepulcrum accederem. Frater et T.
-?ticid coh siuQ .eterretni oitcurtsnoc :segeR ouD ?silev douq ,ereciffe silli xe ,sassecnoc non sirespmus ser muc ,otaC ,ibit rutigi tecalP .rutnacov isoinegni ,tnebah iuq setutriv euqsae ,enimon iinegni onu rutnalleppa ainmo eref eauQ .sumeireper mamirrebu solli dupa ,melixe soh dupa maipoc te murer orev mairetaM .esoitiv ,ixid tu ,elli deS
-
-?tirecefed ,epeas tif tu ,aiticima ba satilitu is ,mednat sega diuq deS .siteramitsea itnat metatpulov isin ,etreC ;-metateip iuq ,tse suip omeN :dulli ,oderc ,itsoN .tile gnicsipida rutetcesnoc ,tema tis rolod muspi meroL";
-        } else if (id == "b") {
-            email_text.text = "This is 'b'";
-        } else {
-            email_text.text = "None selected.";
+        int numberOfRows = emailCsv.First().Value.Count;
+        int idIndex = 0;
+        for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
+            if (emailCsv["id"][rowIndex] == id) {
+                idIndex = rowIndex;
+                break;
+            }
         }
+        email_text.text = emailCsv["body"][idIndex];
+    }
+
+    // This runs whenever we need to get new emails.
+    // Right now I just use time, I'll add better logic later.
+    public void GetEmails(int currentTime)
+    {
+        currentTime++;
+    }
+
+    void CreateEmailsonStart(Dictionary<string, List<string>> emails)
+    {
+        int numberOfRows = emails.First().Value.Count;
+
+        for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++)
+        {
+            if (emails["conditions"][rowIndex] == "TRUE"){
+                spawnEmail(emails, rowIndex);
+            }
+        }
+
+        return;
+    }
+
+    void spawnEmail(Dictionary<string, List<string>> listEmails, int rowIndex)
+    {
+        Debug.Log("Created item.");
+        GameObject newEmailDisplay = Instantiate(emailDisplay, new Vector3(0, 0, 0), Quaternion.identity);
+        newEmailDisplay.transform.SetParent(contentTransform, false);
+        IconClickHandler script = newEmailDisplay.GetComponent<IconClickHandler>();
+        script.iconID = listEmails["id"][rowIndex];
+        script.txtFrom.text = listEmails["from"][rowIndex];
+        script.txtSubject.text = listEmails["subject"][rowIndex];
+        script.txtTime.text = listEmails["msgtime"][rowIndex];
+
+        return;
     }
 }
 
