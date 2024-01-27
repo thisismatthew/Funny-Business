@@ -16,12 +16,14 @@ public class IconClickHandler : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {
+
+        
         txtFrom.fontStyle = FontStyles.Underline | FontStyles.Bold;
         txtSubject.fontStyle = FontStyles.Underline | FontStyles.Bold;
         txtTime.fontStyle = FontStyles.Underline | FontStyles.Bold;
     }
 
-    // TODO: Consult Matt
+    // Completed
     // public void Update()
     // {
     //     // Set email as focused if selected

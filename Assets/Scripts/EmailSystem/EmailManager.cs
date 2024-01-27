@@ -90,6 +90,11 @@ Subject: {emailCsv["subject"][idIndex]}
         GameObject newEmailDisplay = Instantiate(emailDisplay, new Vector3(0, 0, 0), Quaternion.identity);
         newEmailDisplay.transform.SetParent(contentTransform, false);
         IconClickHandler script = newEmailDisplay.GetComponent<IconClickHandler>();
+        var children = script.GetComponentsInChildren<TextMeshProUGUI>();
+        script.txtFrom = children[0];
+        script.txtSubject = children[1];
+        script.txtTime = children[2];
+        script.bckground = script.GetComponentInChildren<UnityEngine.UI.Image>();
         script.iconID = listEmails["id"][rowIndex];
         script.txtFrom.text = listEmails["from"][rowIndex];
         script.txtSubject.text = listEmails["subject"][rowIndex];
