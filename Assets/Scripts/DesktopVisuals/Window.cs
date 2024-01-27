@@ -17,17 +17,15 @@ public class Window : MonoBehaviour
     
     public void OpenWindow()
     {
-        Debug.Log(gameObject.name + "opened");
         isOpen = true;
         transform.position = OpenPosition;
-        transform.DOScale(1, .2f);
+        transform.DOScale(1, 0.2f);
     }
 
     public void CloseWindow()
     {
-        Debug.Log(gameObject.name + "closed");
         isOpen = false;
-        transform.DOScale(0, .2f);
+        transform.DOScale(0, 0.2f);
     }
 
     private void MoveWindow()
