@@ -18,7 +18,8 @@ public class EmailManager : MonoBehaviour
 
     void Start()
     {
-        emailCsv = TSVReader.ReadTSV("emails.txt");
+        email_text.text = "";
+        emailCsv = TSVReader.ReadTSV("emails1.txt");
         CreateEmailsonStart(emailCsv);
     }
 
@@ -51,7 +52,15 @@ public class EmailManager : MonoBehaviour
                 break;
             }
         }
-        email_text.text = emailCsv["body"][idIndex];
+        string tmp_text = $@"From: {emailCsv["from"][idIndex]}
+Sent: {emailCsv["msgtime"][idIndex]}
+To: Manager
+Subject: {emailCsv["subject"][idIndex]}
+
+{emailCsv["body"][idIndex]}
+    ";
+
+        email_text.text = tmp_text;
     }
 
     // This runs whenever we need to get new emails.

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,12 +7,7 @@ using DG.Tweening;
 public class Window : MonoBehaviour
 {
     public bool isOpen = false;
-    private Vector2 OpenPosition;
-
-    private void Start()
-    {
-        //OpenPosition = GetComponent<RectTransform>().position;
-    }
+    public Vector2 OpenPosition;
 
     public void BringToFocus()
     {
@@ -23,15 +17,15 @@ public class Window : MonoBehaviour
     
     public void OpenWindow()
     {
-        Debug.Log(gameObject.name + " Open");
-        isOpen = true;
-        //transform.position = OpenPosition;
-        transform.DOScale(1, 0.2f);
+        if (!isOpen) {
+            isOpen = true;
+            transform.position = OpenPosition;
+            transform.DOScale(1, 0.2f);
+        }
     }
 
     public void CloseWindow()
     {
-        Debug.Log(gameObject.name + " Closed");
         isOpen = false;
         transform.DOScale(0, 0.2f);
     }

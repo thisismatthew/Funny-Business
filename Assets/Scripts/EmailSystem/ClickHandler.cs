@@ -9,8 +9,6 @@ public class IconClickHandler : MonoBehaviour, IPointerClickHandler
     public TextMeshProUGUI txtFrom;
     public TextMeshProUGUI txtSubject;
     public TextMeshProUGUI txtTime;
-    private bool focused = false;
-    private bool read = false;
     // public GameObject EmailManager = GameObject.FindWithTag("EmailManagers");
 
 
@@ -42,8 +40,6 @@ public class IconClickHandler : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         EmailManager.Instance.SetEmailId(iconID);
-        read = true;
-        focused = true;
         SetRead();
     }
 
