@@ -17,11 +17,9 @@ public class Window : MonoBehaviour
     
     public void OpenWindow()
     {
-        if (!isOpen) {
-            isOpen = true;
-            transform.position = OpenPosition;
-            transform.DOScale(1, 0.2f);
-        }
+        isOpen = true;
+        transform.position = OpenPosition;
+        transform.DOScale(1, 0.2f);
     }
 
     public void CloseWindow()
