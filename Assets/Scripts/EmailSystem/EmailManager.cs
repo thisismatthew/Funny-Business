@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 
 public class EmailManager : MonoBehaviour
@@ -15,12 +16,15 @@ public class EmailManager : MonoBehaviour
     public string CurrentId;
     public Transform contentTransform;
     private Dictionary<string, List<string>> emailCsv;
+    int numberOfRows;
 
     void Start()
     {
+        numberOfRows = emailCsv.First().Value.Count;
         email_text.text = "";
-        emailCsv = TSVReader.ReadTSV("emails1.txt");
-        CreateEmailsonStart(emailCsv);
+        emailCsv = TSVReader.ReadTSV("emails.txt");
+        emailCsv["loadedAlready"] = Enumerable.Repeat("FALSE", numberOfRows).ToList();
+        RefreshEmails(emailCsv);
     }
 
     void Awake()
@@ -44,14 +48,8 @@ public class EmailManager : MonoBehaviour
 
     public void DisplayContentForIcon(string id)
     {
-        int numberOfRows = emailCsv.First().Value.Count;
-        int idIndex = 0;
-        for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
-            if (emailCsv["id"][rowIndex] == id) {
-                idIndex = rowIndex;
-                break;
-            }
-        }
+        int idIndex = SearchEmails(emailCsv, id);
+        Debug.Log(idIndex.ToString());
         string tmp_text = $@"From: {emailCsv["from"][idIndex]}
 Sent: {emailCsv["msgtime"][idIndex]}
 To: Manager
@@ -65,18 +63,25 @@ Subject: {emailCsv["subject"][idIndex]}
 
     // This runs whenever we need to get new emails.
     // Right now I just use time, I'll add better logic later.
-    public void GetEmails(int currentTime)
+    public void AdvanceTime(int currentTime)
     {
         currentTime++;
+        SendEmail("aa");
+        SendEmail("ab");
+        SendEmail("ac");
+        SendEmail("ad");
+        SendEmail("ae");
+        SendEmail("af");
+        SendEmail("ag", true);
     }
 
-    void CreateEmailsonStart(Dictionary<string, List<string>> emails)
+    void RefreshEmails(Dictionary<string, List<string>> emails)
     {
         int numberOfRows = emails.First().Value.Count;
 
         for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++)
         {
-            if (emails["conditions"][rowIndex] == "TRUE"){
+            if (emails["conditions"][rowIndex] == "TRUE" & emails["loadedAlready"][rowIndex] == "FALSE"){
                 spawnEmail(emails, rowIndex);
             }
         }
@@ -94,8 +99,29 @@ Subject: {emailCsv["subject"][idIndex]}
         script.txtFrom.text = listEmails["from"][rowIndex];
         script.txtSubject.text = listEmails["subject"][rowIndex];
         script.txtTime.text = listEmails["msgtime"][rowIndex];
+        listEmails["loadedAlready"][rowIndex] = "TRUE";
 
         return;
+    }
+
+    int SearchEmails(Dictionary<string, List<string>> emails, string searchId)
+    {
+        for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
+            if (emails["id"][rowIndex] == searchId) {
+                return rowIndex;
+            }
+        }
+        throw new Exception($"Error: id {searchId} not found in email list.");
+    }
+
+    public void SendEmail(string idToActivate, bool sendASAP = false)
+    {
+        int indexToActivate = SearchEmails(emailCsv, idToActivate);
+        // Excuse this DISGUSTING behaviour
+        emailCsv["conditions"][indexToActivate] = "TRUE";
+        if (sendASAP) {
+            RefreshEmails(emailCsv);
+        }
     }
 }
 
