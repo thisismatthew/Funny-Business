@@ -18,6 +18,7 @@ public class EmailManager : MonoBehaviour
 
     void Start()
     {
+        email_text.text = "";
         emailCsv = TSVReader.ReadTSV("emails.txt");
         CreateEmailsonStart(emailCsv);
     }
