@@ -21,3 +21,5 @@ MonoBehaviour:
     ProboPercentage: 2
     SelfEsteemPercentage: 80
     Buzz: 1
+  Events:
+  - {fileID: 0}
