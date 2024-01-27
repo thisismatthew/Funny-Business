@@ -1,0 +1,11 @@
+﻿id,from,subject,msgtime,body,conditions
+a,Peter,About dog,10:00,<b>Test</b>,FALSE
+b,Paul,URGENT,11:00,<b>Test</b>,TRUE
+c,Mary,Try our new ice-cream,12:00,<b>Test</b>,TRUE
+d,Elizabeth,changes,13:00,Test,FALSE
+e,John,Do you neeed?,14:00,Test,TRUE
+f,Edwards,Eat better now!,15:00,Test,FALSE
+g,Tina,"Apples, buy apples!",16:00,Test,TRUE
+h,Turner,bOnEr pIlLs,17:00,Test,TRUE
+i,Classic,new beatles,18:00,Test,FALSE
+j,Movies,TAXI,19:00,Test,TRUE

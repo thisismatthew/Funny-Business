@@ -1,0 +1,601 @@
+id	from	subject	msgtime	body	conditions
+a	Cameron Brown	Event Invitation	23:22	"Hi,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Sincerely,
+<i>Your Customer Success Team</i>"	FALSE
+b	Jordan Davis	Invoice Details	07:36	"Hi,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Sincerely,
+<b>The Team at Company X</b>"	TRUE
+c	Reese Smith	Event Invitation	07:57	"Dear,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Cheers,
+<i>Your Dedicated Support Agent</i>"	FALSE
+d	Alex Davis	Quarterly Report	07:32	"Dear,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Cheers,
+<b>Your Account Manager</b>"	TRUE
+e	Jamie Miller	Invoice Details	23:27	"Hello,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Thank you,
+<b>Your Partner in Progress</b>"	FALSE
+f	Morgan Garcia	Project Update	09:12	"Dear,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Cheers,
+<i>Your Customer Success Team</i>"	TRUE
+g	Jordan Garcia	Flight Itinerary	03:33	"Hello,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Kind regards,
+<i>Your Customer Success Team</i>"	TRUE
+h	Riley Garcia	Invoice Details	17:53	"Hello,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Kind regards,
+<i>Your Dedicated Support Agent</i>"	TRUE
+i	Reese Rodriguez	Flight Itinerary	19:26	"Hello,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Kind regards,
+<b>The Team at Company X</b>"	TRUE
+j	Jamie Davis	Meeting Schedule	00:01	"Hello,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Kind regards,
+<i>Your Dedicated Support Agent</i>"	TRUE
+k	Alex Smith	Interview Confirmation	05:18	"Hi,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Sincerely,
+<i>Your Customer Success Team</i>"	FALSE
+l	Taylor Smith	Invoice Details	07:18	"Hello,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Cheers,
+<b>The Team at Company X</b>"	TRUE
+m	Cameron Rodriguez	Flight Itinerary	07:54	"Hello,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Kind regards,
+<b>Your Partner in Progress</b>"	TRUE
+n	Morgan Johnson	Package Delivery	11:08	"Hi,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Sincerely,
+<b>Your Partner in Progress</b>"	TRUE
+o	Riley Garcia	Invoice Details	05:50	"Dear,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Thank you,
+<i>Your Customer Success Team</i>"	FALSE
+p	Avery Brown	Interview Confirmation	13:02	"Hi,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Kind regards,
+<i>Your Dedicated Support Agent</i>"	TRUE
+q	Avery Rodriguez	Project Update	10:00	"Hello,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Best regards,
+<b>Your Account Manager</b>"	TRUE
+r	Jamie Johnson	Package Delivery	17:07	"Hello,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Kind regards,
+<i>Your Customer Success Team</i>"	TRUE
+s	Jamie Smith	Project Update	10:40	"Hello,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Cheers,
+<i>Your Customer Success Team</i>"	TRUE
+t	Jamie Williams	Survey Request	03:22	"Dear,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Sincerely,
+<i>Your Customer Success Team</i>"	TRUE
+u	Alex Smith	Event Invitation	14:45	"Hi,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Sincerely,
+<b>Your Partner in Progress</b>"	TRUE
+v	Avery Brown	Meeting Schedule	22:29	"Dear,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Kind regards,
+<b>Your Account Manager</b>"	FALSE
+w	Jamie Williams	Budget Review	22:47	"Hello,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Kind regards,
+<b>The Team at Company X</b>"	TRUE
+x	Reese Davis	Event Invitation	16:54	"Hi,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Sincerely,
+<i>Your Customer Success Team</i>"	TRUE
+y	Cameron Brown	Quarterly Report	19:55	"Dear,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Best regards,
+<i>Your Customer Success Team</i>"	TRUE
+z	Avery Davis	Invoice Details	17:54	"Hello,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Best regards,
+<b>The Team at Company X</b>"	TRUE
+aa	Taylor Johnson	Invoice Details	15:33	"Hi,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Best regards,
+<b>Your Account Manager</b>"	FALSE
+ab	Jamie Smith	Project Update	15:55	"Hi,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Best regards,
+<i>Your Dedicated Support Agent</i>"	TRUE
+ac	Morgan Smith	Flight Itinerary	15:05	"Hello,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Thank you,
+<i>Your Customer Success Team</i>"	TRUE
+ad	Riley Garcia	Flight Itinerary	22:48	"Hi,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Cheers,
+<b>Your Account Manager</b>"	TRUE
+ae	Avery Garcia	Budget Review	15:33	"Hi,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Best regards,
+<i>Your Dedicated Support Agent</i>"	FALSE
+af	Alex Jones	Meeting Schedule	16:25	"Dear,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Best regards,
+<b>Your Partner in Progress</b>"	TRUE
+ag	Avery Smith	Flight Itinerary	19:03	"Hello,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Thank you,
+<b>Your Partner in Progress</b>"	FALSE
+ah	Casey Jones	Event Invitation	19:04	"Dear,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Sincerely,
+<b>The Team at Company X</b>"	TRUE
+ai	Morgan Garcia	Budget Review	03:57	"Hi,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Sincerely,
+<i>Your Dedicated Support Agent</i>"	TRUE
+aj	Alex Davis	Survey Request	20:03	"Hello,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Sincerely,
+<b>Your Partner in Progress</b>"	FALSE
+ak	Alex Garcia	Package Delivery	08:22	"Hello,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Sincerely,
+<i>Your Customer Success Team</i>"	TRUE
+al	Avery Johnson	Quarterly Report	16:51	"Dear,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Best regards,
+<b>Your Account Manager</b>"	FALSE
+am	Jamie Garcia	Package Delivery	23:42	"Dear,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Kind regards,
+<b>The Team at Company X</b>"	TRUE
+an	Jamie Davis	Quarterly Report	01:06	"Dear,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Thank you,
+<i>Your Dedicated Support Agent</i>"	TRUE
+ao	Casey Johnson	Quarterly Report	13:33	"Hello,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Kind regards,
+<b>Your Account Manager</b>"	FALSE
+ap	Alex Garcia	Interview Confirmation	15:37	"Hello,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Sincerely,
+<i>Your Dedicated Support Agent</i>"	TRUE
+aq	Jordan Smith	Meeting Schedule	18:40	"Hello,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Kind regards,
+<i>Your Customer Success Team</i>"	FALSE
+ar	Jamie Davis	Budget Review	05:48	"Hi,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Sincerely,
+<b>Your Account Manager</b>"	TRUE
+as	Riley Martinez	Quarterly Report	09:53	"Dear,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Best regards,
+<i>Your Customer Success Team</i>"	TRUE
+at	Avery Johnson	Event Invitation	23:32	"Hi,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Kind regards,
+<i>Your Customer Success Team</i>"	FALSE
+au	Taylor Jones	Invoice Details	00:34	"Dear,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Kind regards,
+<b>Your Account Manager</b>"	FALSE
+av	Avery Johnson	Budget Review	20:48	"Hi,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Thank you,
+<b>Your Account Manager</b>"	FALSE
+aw	Alex Williams	Flight Itinerary	15:09	"Hello,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Cheers,
+<b>Your Account Manager</b>"	TRUE
+ax	Jordan Martinez	Project Update	22:46	"Hello,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Cheers,
+<i>Your Customer Success Team</i>"	TRUE
+ay	Casey Johnson	Invoice Details	04:44	"Hello,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Thank you,
+<i>Your Customer Success Team</i>"	FALSE
+az	Taylor Martinez	Flight Itinerary	13:21	"Hello,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Kind regards,
+<i>Your Dedicated Support Agent</i>"	TRUE
+ba	Taylor Rodriguez	Budget Review	17:24	"Dear,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Sincerely,
+<b>Your Account Manager</b>"	TRUE
+bb	Cameron Jones	Event Invitation	00:46	"Dear,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Thank you,
+<i>Your Dedicated Support Agent</i>"	TRUE
+bc	Taylor Martinez	Quarterly Report	07:44	"Hello,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Kind regards,
+<b>Your Account Manager</b>"	TRUE
+bd	Casey Smith	Interview Confirmation	03:09	"Hello,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Best regards,
+<b>Your Account Manager</b>"	TRUE
+be	Casey Williams	Quarterly Report	16:40	"Hello,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Sincerely,
+<i>Your Dedicated Support Agent</i>"	TRUE
+bf	Taylor Garcia	Survey Request	07:07	"Dear,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Cheers,
+<i>Your Customer Success Team</i>"	TRUE
+bg	Reese Garcia	Project Update	17:50	"Hi,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Sincerely,
+<i>Your Dedicated Support Agent</i>"	TRUE
+bh	Riley Brown	Project Update	21:45	"Hi,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Sincerely,
+<b>Your Partner in Progress</b>"	TRUE
+bi	Morgan Martinez	Interview Confirmation	16:23	"Hi,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Best regards,
+<i>Your Dedicated Support Agent</i>"	TRUE
+bj	Jamie Smith	Flight Itinerary	11:27	"Hi,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Thank you,
+<b>Your Account Manager</b>"	FALSE
+bk	Alex Martinez	Invoice Details	02:04	"Hi,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Thank you,
+<i>Your Customer Success Team</i>"	TRUE
+bl	Taylor Martinez	Flight Itinerary	18:07	"Dear,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Best regards,
+<i>Your Dedicated Support Agent</i>"	FALSE
+bm	Riley Davis	Meeting Schedule	01:24	"Dear,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Best regards,
+<i>Your Dedicated Support Agent</i>"	TRUE
+bn	Taylor Brown	Quarterly Report	08:56	"Hello,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Sincerely,
+<b>Your Account Manager</b>"	TRUE
+bo	Reese Martinez	Budget Review	14:54	"Dear,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Cheers,
+<b>The Team at Company X</b>"	TRUE
+bp	Riley Williams	Flight Itinerary	11:04	"Hello,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Kind regards,
+<b>Your Partner in Progress</b>"	FALSE
+bq	Casey Brown	Package Delivery	01:37	"Hello,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Best regards,
+<i>Your Dedicated Support Agent</i>"	TRUE
+br	Alex Rodriguez	Survey Request	01:16	"Dear,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Thank you,
+<i>Your Customer Success Team</i>"	TRUE
+bs	Alex Rodriguez	Event Invitation	07:41	"Hello,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Best regards,
+<b>Your Account Manager</b>"	TRUE
+bt	Jordan Davis	Flight Itinerary	01:09	"Dear,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Kind regards,
+<b>Your Partner in Progress</b>"	TRUE
+bu	Riley Johnson	Event Invitation	04:52	"Hi,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Sincerely,
+<i>Your Dedicated Support Agent</i>"	TRUE
+bv	Morgan Williams	Event Invitation	07:56	"Dear,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Sincerely,
+<b>Your Partner in Progress</b>"	TRUE
+bw	Jordan Smith	Event Invitation	07:36	"Dear,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Best regards,
+<i>Your Customer Success Team</i>"	TRUE
+bx	Casey Williams	Event Invitation	15:03	"Hello,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Best regards,
+<b>The Team at Company X</b>"	FALSE
+by	Riley Smith	Project Update	23:44	"Hi,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Sincerely,
+<b>Your Account Manager</b>"	TRUE
+bz	Jordan Martinez	Project Update	16:19	"Hi,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Best regards,
+<b>Your Partner in Progress</b>"	TRUE
+ca	Morgan Jones	Invoice Details	23:09	"Hi,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Thank you,
+<i>Your Dedicated Support Agent</i>"	TRUE
+cb	Taylor Williams	Event Invitation	05:52	"Hi,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Thank you,
+<i>Your Customer Success Team</i>"	TRUE
+cc	Cameron Rodriguez	Flight Itinerary	08:55	"Dear,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Best regards,
+<b>Your Partner in Progress</b>"	FALSE
+cd	Riley Brown	Flight Itinerary	13:41	"Dear,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Cheers,
+<i>Your Dedicated Support Agent</i>"	FALSE
+ce	Reese Garcia	Package Delivery	01:33	"Dear,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Kind regards,
+<i>Your Dedicated Support Agent</i>"	TRUE
+cf	Taylor Williams	Flight Itinerary	18:08	"Hello,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Kind regards,
+<b>Your Partner in Progress</b>"	TRUE
+cg	Taylor Davis	Survey Request	20:05	"Hello,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Cheers,
+<b>Your Account Manager</b>"	TRUE
+ch	Casey Martinez	Project Update	10:49	"Hello,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Kind regards,
+<b>Your Partner in Progress</b>"	TRUE
+ci	Riley Jones	Quarterly Report	19:05	"Dear,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Kind regards,
+<i>Your Dedicated Support Agent</i>"	TRUE
+cj	Alex Johnson	Survey Request	04:39	"Hello,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Thank you,
+<b>Your Partner in Progress</b>"	FALSE
+ck	Alex Williams	Event Invitation	18:14	"Hello,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Thank you,
+<b>The Team at Company X</b>"	TRUE
+cl	Jamie Davis	Package Delivery	20:10	"Hello,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Thank you,
+<i>Your Dedicated Support Agent</i>"	TRUE
+cm	Morgan Martinez	Event Invitation	13:51	"Dear,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Best regards,
+<b>Your Account Manager</b>"	FALSE
+cn	Taylor Williams	Budget Review	01:25	"Dear,
+
+As part of our commitment to <b>excellence</b>, we have <i>implemented</i> several strategic initiatives that will enhance our services.
+
+Sincerely,
+<i>Your Dedicated Support Agent</i>"	FALSE
+co	Avery Garcia	Invoice Details	12:16	"Dear,
+
+<b>It's time for our quarterly review</b>. We've made significant progress and want to share the <i>key highlights</i> with you.
+
+Sincerely,
+<i>Your Customer Success Team</i>"	TRUE
+cp	Cameron Brown	Project Update	08:06	"Hi,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Thank you,
+<b>Your Account Manager</b>"	TRUE
+cq	Casey Rodriguez	Flight Itinerary	07:04	"Hello,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Kind regards,
+<i>Your Customer Success Team</i>"	FALSE
+cr	Casey Garcia	Quarterly Report	03:55	"Hi,
+
+<b>Our records indicate</b> that your subscription is due for renewal. We would like to offer you a <i>special discount</i> as a valued member.
+
+Cheers,
+<i>Your Dedicated Support Agent</i>"	TRUE
+cs	Morgan Miller	Invoice Details	15:47	"Hello,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Cheers,
+<i>Your Dedicated Support Agent</i>"	TRUE
+ct	Jamie Jones	Quarterly Report	17:11	"Hello,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Sincerely,
+<b>Your Account Manager</b>"	FALSE
+cu	Riley Miller	Survey Request	09:18	"Dear,
+
+<b>We are pleased to announce</b> the launch of our new product line. We believe this will bring <i>great value</i> to our customers and partners.
+
+Kind regards,
+<b>Your Partner in Progress</b>"	FALSE
+cv	Avery Smith	Meeting Schedule	03:54	"Dear,
+
+<b>Your feedback is essential</b> for us. We have attached a detailed survey and would appreciate your <i>valuable insights</i>.
+
+Kind regards,
+<i>Your Customer Success Team</i>"	TRUE
