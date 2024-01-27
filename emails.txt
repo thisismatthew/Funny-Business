@@ -1,4 +1,101 @@
 id	from	subject	msgtime	body	conditions
-a	Cameron Brown	Event Invitation	23:22	Confirming your interview for the developer position on Monday at 10 AM.	FALSE
-b	Jordan Davis	Invoice Details	07:36	Attached is the invoice for the services rendered this month.	TRUE
-c	Reese Smith	Event Invitation	07:57	The quarterly report is ready for review. Please provide your feedback.	FALSE
+a	Cameron Brown	Event Invitation	23:22	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+b	Jordan Davis	Invoice Details	7:36	Attached is the invoice for the services rendered this month.	FALSE
+c	Reese Smith	Event Invitation	7:57	The quarterly report is ready for review. Please provide your feedback.	FALSE
+d	Alex Davis	Quarterly Report	7:32	Please find attached the details of the meeting scheduled for next week.	TRUE
+e	Jamie Miller	Invoice Details	23:27	We'd appreciate your feedback on our services. Here's a quick survey.	TRUE
+f	Morgan Garcia	Project Update	9:12	Attached is your flight itinerary for your upcoming business trip.	TRUE
+g	Jordan Garcia	Flight Itinerary	3:33	Attached is your flight itinerary for your upcoming business trip.	TRUE
+h	Riley Garcia	Invoice Details	17:53	The quarterly budget review has been rescheduled to next Thursday.	TRUE
+i	Reese Rodriguez	Flight Itinerary	19:26	The quarterly report is ready for review. Please provide your feedback.	TRUE
+j	Jamie Davis	Meeting Schedule	0:01	The quarterly budget review has been rescheduled to next Thursday.	TRUE
+k	Alex Smith	Interview Confirmation	5:18	Attached is your flight itinerary for your upcoming business trip.	TRUE
+l	Taylor Smith	Invoice Details	7:18	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+m	Cameron Rodriguez	Flight Itinerary	7:54	We'd appreciate your feedback on our services. Here's a quick survey.	TRUE
+n	Morgan Johnson	Package Delivery	11:08	We'd appreciate your feedback on our services. Here's a quick survey.	TRUE
+o	Riley Garcia	Invoice Details	5:50	Attached is the invoice for the services rendered this month.	TRUE
+p	Avery Brown	Interview Confirmation	13:02	Your package has been delivered to the front desk as requested.	TRUE
+q	Avery Rodriguez	Project Update	10:00	Please find attached the details of the meeting scheduled for next week.	TRUE
+r	Jamie Johnson	Package Delivery	17:07	Please find attached the details of the meeting scheduled for next week.	TRUE
+s	Jamie Smith	Project Update	10:40	We'd appreciate your feedback on our services. Here's a quick survey.	TRUE
+t	Jamie Williams	Survey Request	3:22	Attached is your flight itinerary for your upcoming business trip.	TRUE
+u	Alex Smith	Event Invitation	14:45	The quarterly report is ready for review. Please provide your feedback.	TRUE
+v	Avery Brown	Meeting Schedule	22:29	Attached is the invoice for the services rendered this month.	TRUE
+w	Jamie Williams	Budget Review	22:47	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+x	Reese Davis	Event Invitation	16:54	Here's the latest update on the project. Let me know if you have any questions.	TRUE
+y	Cameron Brown	Quarterly Report	19:55	Here's the latest update on the project. Let me know if you have any questions.	TRUE
+z	Avery Davis	Invoice Details	17:54	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+aa	Taylor Johnson	Invoice Details	15:33	Please find attached the details of the meeting scheduled for next week.	TRUE
+ab	Jamie Smith	Project Update	15:55	Your package has been delivered to the front desk as requested.	TRUE
+ac	Morgan Smith	Flight Itinerary	15:05	Please find attached the details of the meeting scheduled for next week.	TRUE
+ad	Riley Garcia	Flight Itinerary	22:48	Your package has been delivered to the front desk as requested.	TRUE
+ae	Avery Garcia	Budget Review	15:33	Please find attached the details of the meeting scheduled for next week.	TRUE
+af	Alex Jones	Meeting Schedule	16:25	The quarterly budget review has been rescheduled to next Thursday.	TRUE
+ag	Avery Smith	Flight Itinerary	19:03	The quarterly report is ready for review. Please provide your feedback.	TRUE
+ah	Casey Jones	Event Invitation	19:04	The quarterly report is ready for review. Please provide your feedback.	TRUE
+ai	Morgan Garcia	Budget Review	3:57	Please find attached the details of the meeting scheduled for next week.	TRUE
+aj	Alex Davis	Survey Request	20:03	You're invited to attend the annual company gala. RSVP by next Friday.	TRUE
+ak	Alex Garcia	Package Delivery	8:22	Your package has been delivered to the front desk as requested.	TRUE
+al	Avery Johnson	Quarterly Report	16:51	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+am	Jamie Garcia	Package Delivery	23:42	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+an	Jamie Davis	Quarterly Report	1:06	Attached is the invoice for the services rendered this month.	TRUE
+ao	Casey Johnson	Quarterly Report	13:33	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+ap	Alex Garcia	Interview Confirmation	15:37	The quarterly report is ready for review. Please provide your feedback.	TRUE
+aq	Jordan Smith	Meeting Schedule	18:40	Please find attached the details of the meeting scheduled for next week.	TRUE
+ar	Jamie Davis	Budget Review	5:48	Please find attached the details of the meeting scheduled for next week.	TRUE
+as	Riley Martinez	Quarterly Report	9:53	Please find attached the details of the meeting scheduled for next week.	TRUE
+at	Avery Johnson	Event Invitation	23:32	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+au	Taylor Jones	Invoice Details	0:34	The quarterly report is ready for review. Please provide your feedback.	TRUE
+av	Avery Johnson	Budget Review	20:48	Here's the latest update on the project. Let me know if you have any questions.	TRUE
+aw	Alex Williams	Flight Itinerary	15:09	Attached is your flight itinerary for your upcoming business trip.	TRUE
+ax	Jordan Martinez	Project Update	22:46	The quarterly report is ready for review. Please provide your feedback.	TRUE
+ay	Casey Johnson	Invoice Details	4:44	We'd appreciate your feedback on our services. Here's a quick survey.	TRUE
+az	Taylor Martinez	Flight Itinerary	13:21	You're invited to attend the annual company gala. RSVP by next Friday.	TRUE
+ba	Taylor Rodriguez	Budget Review	17:24	Your package has been delivered to the front desk as requested.	TRUE
+bb	Cameron Jones	Event Invitation	0:46	The quarterly budget review has been rescheduled to next Thursday.	TRUE
+bc	Taylor Martinez	Quarterly Report	7:44	We'd appreciate your feedback on our services. Here's a quick survey.	TRUE
+bd	Casey Smith	Interview Confirmation	3:09	We'd appreciate your feedback on our services. Here's a quick survey.	TRUE
+be	Casey Williams	Quarterly Report	16:40	Your package has been delivered to the front desk as requested.	TRUE
+bf	Taylor Garcia	Survey Request	7:07	You're invited to attend the annual company gala. RSVP by next Friday.	TRUE
+bg	Reese Garcia	Project Update	17:50	Please find attached the details of the meeting scheduled for next week.	TRUE
+bh	Riley Brown	Project Update	21:45	Your package has been delivered to the front desk as requested.	TRUE
+bi	Morgan Martinez	Interview Confirmation	16:23	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+bj	Jamie Smith	Flight Itinerary	11:27	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+bk	Alex Martinez	Invoice Details	2:04	We'd appreciate your feedback on our services. Here's a quick survey.	TRUE
+bl	Taylor Martinez	Flight Itinerary	18:07	Your package has been delivered to the front desk as requested.	TRUE
+bm	Riley Davis	Meeting Schedule	1:24	You're invited to attend the annual company gala. RSVP by next Friday.	TRUE
+bn	Taylor Brown	Quarterly Report	8:56	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+bo	Reese Martinez	Budget Review	14:54	The quarterly budget review has been rescheduled to next Thursday.	TRUE
+bp	Riley Williams	Flight Itinerary	11:04	The quarterly report is ready for review. Please provide your feedback.	TRUE
+bq	Casey Brown	Package Delivery	1:37	Attached is the invoice for the services rendered this month.	TRUE
+br	Alex Rodriguez	Survey Request	1:16	The quarterly budget review has been rescheduled to next Thursday.	TRUE
+bs	Alex Rodriguez	Event Invitation	7:41	The quarterly report is ready for review. Please provide your feedback.	TRUE
+bt	Jordan Davis	Flight Itinerary	1:09	Your package has been delivered to the front desk as requested.	TRUE
+bu	Riley Johnson	Event Invitation	4:52	Your package has been delivered to the front desk as requested.	TRUE
+bv	Morgan Williams	Event Invitation	7:56	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+bw	Jordan Smith	Event Invitation	7:36	The quarterly budget review has been rescheduled to next Thursday.	TRUE
+bx	Casey Williams	Event Invitation	15:03	You're invited to attend the annual company gala. RSVP by next Friday.	TRUE
+by	Riley Smith	Project Update	23:44	Attached is the invoice for the services rendered this month.	TRUE
+bz	Jordan Martinez	Project Update	16:19	The quarterly budget review has been rescheduled to next Thursday.	TRUE
+ca	Morgan Jones	Invoice Details	23:09	You're invited to attend the annual company gala. RSVP by next Friday.	TRUE
+cb	Taylor Williams	Event Invitation	5:52	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+cc	Cameron Rodriguez	Flight Itinerary	8:55	You're invited to attend the annual company gala. RSVP by next Friday.	TRUE
+cd	Riley Brown	Flight Itinerary	13:41	Here's the latest update on the project. Let me know if you have any questions.	TRUE
+ce	Reese Garcia	Package Delivery	1:33	The quarterly report is ready for review. Please provide your feedback.	TRUE
+cf	Taylor Williams	Flight Itinerary	18:08	We'd appreciate your feedback on our services. Here's a quick survey.	TRUE
+cg	Taylor Davis	Survey Request	20:05	Attached is the invoice for the services rendered this month.	TRUE
+ch	Casey Martinez	Project Update	10:49	The quarterly budget review has been rescheduled to next Thursday.	TRUE
+ci	Riley Jones	Quarterly Report	19:05	Attached is your flight itinerary for your upcoming business trip.	TRUE
+cj	Alex Johnson	Survey Request	4:39	Please find attached the details of the meeting scheduled for next week.	TRUE
+ck	Alex Williams	Event Invitation	18:14	Please find attached the details of the meeting scheduled for next week.	TRUE
+cl	Jamie Davis	Package Delivery	20:10	Here's the latest update on the project. Let me know if you have any questions.	TRUE
+cm	Morgan Martinez	Event Invitation	13:51	Attached is your flight itinerary for your upcoming business trip.	TRUE
+cn	Taylor Williams	Budget Review	1:25	Confirming your interview for the developer position on Monday at 10 AM.	TRUE
+co	Avery Garcia	Invoice Details	12:16	The quarterly report is ready for review. Please provide your feedback.	TRUE
+cp	Cameron Brown	Project Update	8:06	The quarterly report is ready for review. Please provide your feedback.	TRUE
+cq	Casey Rodriguez	Flight Itinerary	7:04	Here's the latest update on the project. Let me know if you have any questions.	TRUE
+cr	Casey Garcia	Quarterly Report	3:55	Here's the latest update on the project. Let me know if you have any questions.	TRUE
+cs	Morgan Miller	Invoice Details	15:47	Your package has been delivered to the front desk as requested.	TRUE
+ct	Jamie Jones	Quarterly Report	17:11	Please find attached the details of the meeting scheduled for next week.	TRUE
+cu	Riley Miller	Survey Request	9:18	You're invited to attend the annual company gala. RSVP by next Friday.	TRUE
+cv	Avery Smith	Meeting Schedule	3:54	Attached is the invoice for the services rendered this month.	TRUE
