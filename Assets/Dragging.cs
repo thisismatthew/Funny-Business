@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,14 @@ using UnityEngine.EventSystems;
 
 public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler
 {
-    [SerializeField]
     private Canvas canvas;
 
     private Vector2 offset;
+
+    private void Awake()
+    {
+        canvas = GetComponentInParent<Canvas>();
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {

@@ -27,10 +27,10 @@ public class ProfileDisplay : Window
         Name.text = comedian.Name;
         Bio.text = comedian.Bio;
         GigSpeed.text = "Gig Prep Time: " + comedian.Statistics.GigSpeedDays;
-        HitRate.text = "Hit Rate: " + comedian.Statistics.HitRatePhrase[comedian.Statistics.HitRate];
-        SelfObs.text = "Self Obsession: " + comedian.Statistics.SelfObsessedPhrases[comedian.Statistics.SelfObsession];
-        Probo.text = "How Probo: " + comedian.Statistics.ProbboPhrases[comedian.Statistics.Probo];
-        Buzz.text = "How Probo: " + comedian.Statistics.BuzzPhrases[comedian.Statistics.Buzz];
+        HitRate.text = "Hit Rate: " + comedian.Statistics.HitRatePhrase[comedian.Statistics.HitRate-1];
+        SelfObs.text = "Self Obsession: " + comedian.Statistics.SelfObsessedPhrases[comedian.Statistics.SelfObsession-1];
+        Probo.text = "How Probo: " + comedian.Statistics.ProbboPhrases[comedian.Statistics.Probo-1];
+        Buzz.text = "How Probo: " + comedian.Statistics.BuzzPhrases[comedian.Statistics.Buzz-1];
         OpenWindow();
     }
     

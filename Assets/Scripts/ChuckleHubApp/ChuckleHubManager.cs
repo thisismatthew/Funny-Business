@@ -23,12 +23,13 @@ public class ChuckleHubManager : MonoBehaviour
     public void OpenHireWindows()
     {
         int hiresAvailable = 0;
-        if (AvailableToHire.Count > 3) hiresAvailable = 2;
+        if (AvailableToHire.Count > 3) hiresAvailable = 3;
         else hiresAvailable = AvailableToHire.Count;
 
 
         for (int i = 0; i < hiresAvailable; i++)
         {
+            Debug.Log(i);
             AvailableHireWindows[i].LoadInComdian(AvailableToHire[i]);
         }
     }
