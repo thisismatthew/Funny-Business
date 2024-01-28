@@ -17,6 +17,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        transform.parent.transform.SetAsLastSibling();
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             (RectTransform)canvas.transform,
             eventData.position,
@@ -32,7 +33,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         if (transform.parent == null) return;
-
+        
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             (RectTransform)canvas.transform,
             eventData.position,
