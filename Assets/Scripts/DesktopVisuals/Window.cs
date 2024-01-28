@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,13 @@ using DG.Tweening;
 public class Window : MonoBehaviour
 {
     public bool isOpen = false;
-    public Vector2 OpenPosition;
+    private Vector2 OpenPosition;
+    //Todo set open position to the starting position of the window
+
+    private void Start()
+    {
+        OpenPosition = transform.position;
+    }
 
     public void BringToFocus()
     {
