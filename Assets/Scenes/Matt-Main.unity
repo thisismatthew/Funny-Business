@@ -8463,8 +8463,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 607351303a341784dbff101bda3edcb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HourTickTime: 10
+  HourTickTime: 1
   TimeDisplay: {fileID: 759882477}
+  AllHours: 0
   TransitionAnimator: {fileID: 564710681}
 --- !u!1 &1133918101
 GameObject:
