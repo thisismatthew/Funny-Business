@@ -38,13 +38,7 @@ public class Clock : MonoBehaviour
             if (AllHours == 10)
             {
                 Debug.Log("RUNNING TEST");
-                Dictionary<string, string> businessEmail = new Dictionary<string, string>
-            {
-                {"from", "a.johnson@enterprise.org"},
-                {"subject", "Meeting Schedule"},
-                {"body", "Please review the attached document for the budget review details."}
-            };
-            emailManager.GeneratedEmail(businessEmail);
+            emailManager.GeneratedEmail(emailManager.positiveEmail);
             }
 
             emailManager.RefreshEmails();
