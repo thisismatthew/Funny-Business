@@ -1,7 +1,7 @@
 id	from	subject	body	msgtime	conditions
 acmag1	Arts & Cultcha Mag	Is comedy dead? Or back? Or both? ____	"This week, we're turning the spotlight on a thought-provoking topic: the state of comedy in our fast-paced world. Is it fading into the shadows, making a roaring comeback, or doing a bit of both? Can you even say anything anymore?
-"	10:00	TRUE
-ap1	AfterPay	Your Payment Could Not Be Processed	"We attempted to automatically charge $67.00 for your order from Dan Murphey's, but it was unsuccessful."	10:00	TRUE
+"	10:00	0
+ap1	AfterPay	Your Payment Could Not Be Processed	"We attempted to automatically charge $67.00 for your order from Dan Murphey's, but it was unsuccessful."	10:00	0
 chuckle1	Chucklehub	New request to connect!	"Great news! A comedian has shown interest in your profile and would like to connect with you on Chucklehub. 
 To view their profile and respond to their connection request, please click the link below:
 
@@ -10,12 +10,12 @@ To view their profile and respond to their connection request, please click the 
 At Chucklehub, we're all about bringing together the brightest and funniest minds in the world of comedy. Whether it's for a quick collab, a long-term project, or just to exchange a few laughs, we're here to make sure you're always a click away from your next great gig or giggle.
 
 Keep chuckling,
-The Chucklehub Team"	10:00	TRUE
-jackie1	Jackie Jax	Meeting next week?		10:00	FALSE
-jetstar1	Jetstar Airways	Japan On SALE Now __		10:00	FALSE
-SICF1	Smelbourne Comedy Festival	Re: 2024 Gala spots request		10:00	FALSE
-slambo1	Ian Slambo Slammerson	Gold Boggo campaign ideas		10:00	FALSE
-mum1	Mum	Hello Dear		10:00	FALSE
+The Chucklehub Team"	10:00	3
+jackie1	Jackie Jax	Meeting next week?		10:00	4
+jetstar1	Jetstar Airways	Japan On SALE Now __		10:00	5
+SICF1	Smelbourne Comedy Festival	Re: 2024 Gala spots request		10:00	16
+slambo1	Ian Slambo Slammerson	Gold Boggo campaign ideas		10:00	18
+mum1	Mum	Hello Dear		10:00	20
 chuckle2	Chucklehub	New request to connect!	"Great news! A comedian has shown interest in your profile and would like to connect with you on Chucklehub. 
 To view their profile and respond to their connection request, please click the link below:
 
@@ -24,8 +24,8 @@ To view their profile and respond to their connection request, please click the 
 At Chucklehub, we're all about bringing together the brightest and funniest minds in the world of comedy. Whether it's for a quick collab, a long-term project, or just to exchange a few laughs, we're here to make sure you're always a click away from your next great gig or giggle.
 
 Keep chuckling,
-The Chucklehub Team"	10:00	FALSE
-witty1	The Witty Committee	Re: TV sketch show ideas????		10:00	FALSE
+The Chucklehub Team"	10:00	22
+witty1	The Witty Committee	Re: TV sketch show ideas????		10:00	24
 chuckle3	Chucklehub	Request to Reset Password	"We received a request to reset the password for your Chucklehub account. If you did not make this request, please ignore this email. No changes will be made to your account.
 
 If you did request a password reset, please click the link below to set up a new password:
@@ -41,6 +41,6 @@ If you have any questions or need assistance, our support team is here to help a
 Thank you for being a part of Chucklehub, where laughter connects us all!
 
 Best regards,
-The Chucklehub Team"	10:00	FALSE
-mum2	Mum	Just Checking In	"Hello dEar, how are you? How's all the comedy GOing?"	10:00	FALSE
-mum3	Mum	Fwd: House Prices Up 4000% in 2024	Hi love....... found this gREAt article from Smelbourne Weekender xxxx	10:00	FALSE
+The Chucklehub Team"	10:00	26
+mum2	Mum	Just Checking In	"Hello dEar, how are you? How's all the comedy GOing?"	10:00	28
+mum3	Mum	Fwd: House Prices Up 4000% in 2024	Hi love....... found this gREAt article from Smelbourne Weekender xxxx	10:00	30
