@@ -18,13 +18,15 @@ public class E_GigPaysOut : MonoBehaviour, IGigEvent
 
             TriggerPayout();
             emailManager.GeneratedEmail(emailManager.positiveEmail);
+            emailManager.RefreshEmails();
             // End testing
             return;
         } 
         
         Debug.Log(data.name + " flopped...");
         emailManager.GeneratedEmail(emailManager.negativeEmail);
-    }
+        emailManager.RefreshEmails();
+    }   
     
 
     public void TriggerPayout()

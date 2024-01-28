@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using System;
 
 public class Clock : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Clock : MonoBehaviour
 
 
     public int AllHours = 0;
+    int day = 1;
+    int dayOfWeek = 1;
     private EmailManager emailManager;
     public Animator TransitionAnimator;
     // Start is called before the first frame update
@@ -30,18 +33,14 @@ public class Clock : MonoBehaviour
         {
             HoursPassed++;
             AllHours++;
+            day = (AllHours / 9) + 1;
+            dayOfWeek = day % 7;
             if (HoursPassed > 17)
             {
                 TransitionAnimator.Play("ShutDown");
                 ChuckleHubManager.Instance.EndDay();
                 HoursPassed = 9;
-            }
-
-             // Testing
-            if (AllHours == 10)
-            {
-                Debug.Log("RUNNING TEST");
-            emailManager.GeneratedEmail(emailManager.positiveEmail);
+                Debug.Log($"Today is {DayofWeekName()}");
             }
 
             emailManager.RefreshEmails();
@@ -59,10 +58,24 @@ public class Clock : MonoBehaviour
         int randomNumber = UnityEngine.Random.Range(1, 60); // Generates a number between 1 and 59
         string randomMinute = randomNumber.ToString("D2");
 
-        // Get day and time
+        // Get time
         string displayTime = HoursPassed + ":" + randomMinute;
-        int day = (AllHours / 9) + 1;
 
         return $"{displayTime} {day.ToString()}/3";
+    }
+
+    public string DayOfWeekName()
+    {
+        switch(dayOfWeek)
+        {
+            case 1: return "Monday";
+            case 2: return "Tuesday";
+            case 3: return "Wednesday";
+            case 4: return "Thursday";
+            case 5: return "Friday";
+            case 6: return "Saturday";
+            case 7: return "Sunday";
+            default: throw new Exception("Day number must be between 1 and 7.");
+        }
     }
 }
