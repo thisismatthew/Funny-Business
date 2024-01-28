@@ -20,11 +20,11 @@ public class EmailManager : MonoBehaviour
 
     void Start()
     {
-        numberOfRows = emailCsv.First().Value.Count;
         email_text.text = "";
         emailCsv = TSVReader.ReadTSV("emails.txt");
+        numberOfRows = emailCsv.First().Value.Count;
         emailCsv["loadedAlready"] = Enumerable.Repeat("FALSE", numberOfRows).ToList();
-        RefreshEmails(emailCsv);
+        RefreshEmails();
     }
 
     void Awake()
@@ -49,7 +49,6 @@ public class EmailManager : MonoBehaviour
     public void DisplayContentForIcon(string id)
     {
         int idIndex = SearchEmails(emailCsv, id);
-        Debug.Log(idIndex.ToString());
         string tmp_text = $@"From: {emailCsv["from"][idIndex]}
 Sent: {emailCsv["msgtime"][idIndex]}
 To: Manager
@@ -63,43 +62,53 @@ Subject: {emailCsv["subject"][idIndex]}
 
     // This runs whenever we need to get new emails.
     // Right now I just use time, I'll add better logic later.
-    public void AdvanceTime(int currentTime)
+    public void AdvanceTime()
     {
-        currentTime++;
-        SendEmail("aa");
-        SendEmail("ab");
-        SendEmail("ac");
-        SendEmail("ad");
-        SendEmail("ae");
-        SendEmail("af");
-        SendEmail("ag", true);
+        time++;
+        // This is temporary, but this is a public method, can be used by other objects.
+        if (time == 1) {
+            SendEmail("aa");
+            SendEmail("ab");
+            SendEmail("ac");
+            SendEmail("ad");
+            SendEmail("ae");
+            SendEmail("af");
+            SendEmail("ag");
+        }
+        if (time == 2) {
+            SendEmail("h");
+            SendEmail("i");
+            SendEmail("j");
+            SendEmail("k");
+            SendEmail("l");
+        }
+        Debug.Log($"Time is {time}.");
+        
+        RefreshEmails();
     }
 
-    void RefreshEmails(Dictionary<string, List<string>> emails)
-    {
-        int numberOfRows = emails.First().Value.Count;
+    void RefreshEmails() {
 
         for (int rowIndex = 0; rowIndex < numberOfRows; rowIndex++)
         {
-            if (emails["conditions"][rowIndex] == "TRUE" & emails["loadedAlready"][rowIndex] == "FALSE"){
-                spawnEmail(emails, rowIndex);
+            if (emailCsv["conditions"][rowIndex] == "TRUE" & emailCsv["loadedAlready"][rowIndex] == "FALSE"){
+                spawnEmail(rowIndex);
             }
         }
 
         return;
     }
 
-    void spawnEmail(Dictionary<string, List<string>> listEmails, int rowIndex)
+    void spawnEmail(int rowIndex)
     {
-        Debug.Log("Created item.");
         GameObject newEmailDisplay = Instantiate(emailDisplay, new Vector3(0, 0, 0), Quaternion.identity);
         newEmailDisplay.transform.SetParent(contentTransform, false);
         IconClickHandler script = newEmailDisplay.GetComponent<IconClickHandler>();
-        script.iconID = listEmails["id"][rowIndex];
-        script.txtFrom.text = listEmails["from"][rowIndex];
-        script.txtSubject.text = listEmails["subject"][rowIndex];
-        script.txtTime.text = listEmails["msgtime"][rowIndex];
-        listEmails["loadedAlready"][rowIndex] = "TRUE";
+        script.iconID = emailCsv["id"][rowIndex];
+        script.txtFrom.text = emailCsv["from"][rowIndex];
+        script.txtSubject.text = emailCsv["subject"][rowIndex];
+        script.txtTime.text = emailCsv["msgtime"][rowIndex];
+        emailCsv["loadedAlready"][rowIndex] = "TRUE";
 
         return;
     }
@@ -120,7 +129,7 @@ Subject: {emailCsv["subject"][idIndex]}
         // Excuse this DISGUSTING behaviour
         emailCsv["conditions"][indexToActivate] = "TRUE";
         if (sendASAP) {
-            RefreshEmails(emailCsv);
+            RefreshEmails();
         }
     }
 }
