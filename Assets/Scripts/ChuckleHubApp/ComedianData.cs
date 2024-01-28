@@ -59,6 +59,8 @@ public class ComedianData : ScriptableObject
     public string Name, Bio;
     public Sprite Portrait;
     public Stats Statistics;
+    public bool hired;
+    public bool onGig;
 }
 
 

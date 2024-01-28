@@ -6,15 +6,16 @@ public class E_GigPaysOut : MonoBehaviour, IGigEvent
 {
     private ComedianData activeData;
     
-    public bool CheckRequirements(ComedianData data)
+    public void RunEvent(ComedianData data)
     {
         // For testing
         var emailManager = GameObject.Find("Window - Email App").GetComponent<EmailManager>();
         activeData = data;
-        int randomPercentage = Random.Range(1, 100);
+        int randomPercentage = Random.Range(1, 5);
         if (randomPercentage < data.Statistics.HitRate)
         {
             Debug.Log(data.name + " had a banger!");
+<<<<<<< HEAD
             // Testing purposes
             emailManager.GeneratedEmail(positiveEmail);
             // End testing
@@ -23,13 +24,20 @@ public class E_GigPaysOut : MonoBehaviour, IGigEvent
         Debug.Log(data.name + " flopped...");
         emailManager.GeneratedEmail(negativeEmail);
         return false;
+=======
+            TriggerPayout();
+            return;
+        } 
+        Debug.Log(data.name + " flopped...");
+>>>>>>> e7386c4d8032245e8b65d21a2b5faebd5798c25a
     }
 
-    public void TriggerEvent()
+    public void TriggerPayout()
     {
-        int payout = activeData.Statistics.Buzz * Random.Range(1, 10);
+        int payout = activeData.Statistics.Buzz * Random.Range(5, 25);
         Debug.Log(activeData.name + " got paid $" + payout);
-        
+        FindObjectOfType<BankApp>().money += payout;
+
     }
 
     Dictionary<string, string> positiveEmail = new Dictionary<string, string>
