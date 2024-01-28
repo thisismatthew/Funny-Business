@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class TSVReader
@@ -14,7 +15,7 @@ public class TSVReader
             if (headerLine == null)
                 return data;
 
-            var headers = headerLine.Split('\t'); // Change delimiter to tab
+            var headers = SplitCsvLine(headerLine);
             foreach (var header in headers)
             {
                 data[header] = new List<string>();
@@ -23,19 +24,51 @@ public class TSVReader
             while (!reader.EndOfStream)
             {
                 var line = reader.ReadLine();
-                var values = line.Split('\t'); // Change delimiter to tab
-                Debug.Log("Length: " + values.Length.ToString());
+
+                // Handle multi-line cells
+                while (CountCharacterOccurrences(line, '\"') % 2 != 0)
+                {
+                    line += "\n" + reader.ReadLine();
+                }
+
+                var values = SplitCsvLine(line);
 
                 for (int i = 0; i < values.Length; i++)
                 {
-                    // Debug.Log("Row: " + i.ToString());
                     if (i < headers.Length) // Check to prevent index out of range
                     {
-                        data[headers[i]].Add(values[i]);
+                        data[headers[i]].Add(RemoveSurroundingQuotes(values[i]));
                     }
                 }
             }
         }
         return data;
+    }
+
+    private static string[] SplitCsvLine(string line)
+    {
+        // Use Regex to split the line by tabs, considering quoted strings
+        return Regex.Split(line, "\t(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+    }
+
+    private static int CountCharacterOccurrences(string input, char character)
+    {
+        // Count how many times a character appears in the string
+        int count = 0;
+        foreach (char c in input)
+        {
+            if (c == character) count++;
+        }
+        return count;
+    }
+
+    private static string RemoveSurroundingQuotes(string input)
+    {
+        // Remove quotes only if they wrap the entire string
+        if (input.StartsWith("\"") && input.EndsWith("\""))
+        {
+            return input.Substring(1, input.Length - 2).Replace("\"\"", "\"");
+        }
+        return input;
     }
 }

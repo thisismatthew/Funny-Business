@@ -21,7 +21,7 @@ public class EmailManager : MonoBehaviour
     void Start()
     {
         email_text.text = "";
-        emailCsv = TSVReader.ReadTSV("emails.txt");
+        emailCsv = TSVReader.ReadTSV("fbemails.txt");
         numberOfRows = emailCsv.First().Value.Count;
         emailCsv["loadedAlready"] = Enumerable.Repeat("FALSE", numberOfRows).ToList();
         RefreshEmails();
@@ -67,20 +67,18 @@ Subject: {emailCsv["subject"][idIndex]}
         time++;
         // This is temporary, but this is a public method, can be used by other objects.
         if (time == 1) {
-            SendEmail("aa");
-            SendEmail("ab");
-            SendEmail("ac");
-            SendEmail("ad");
-            SendEmail("ae");
-            SendEmail("af");
-            SendEmail("ag");
+            SendEmail("jackie1");
+            SendEmail("jetstar1");
+            SendEmail("SICF1");
+            SendEmail("slambo1");
+            SendEmail("mum1");
         }
         if (time == 2) {
-            SendEmail("h");
-            SendEmail("i");
-            SendEmail("j");
-            SendEmail("k");
-            SendEmail("l");
+            SendEmail("chuckle2");
+            SendEmail("witty1");
+            SendEmail("chuckle3");
+            SendEmail("mum2");
+            SendEmail("mum3");
         }
         Debug.Log($"Time is {time}.");
         
