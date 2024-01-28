@@ -12,6 +12,8 @@ public class Clock : MonoBehaviour
     public TextMeshProUGUI TimeDisplay;
 
     private int HoursPassed = 9;
+
+    public Animator TransitionAnimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class Clock : MonoBehaviour
             HoursPassed++;
             if (HoursPassed > 17)
             {
+                TransitionAnimator.Play("ShutDown");
                 ChuckleHubManager.Instance.EndDay();
                 HoursPassed = 9;
             }
