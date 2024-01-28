@@ -15,22 +15,17 @@ public class E_GigPaysOut : MonoBehaviour, IGigEvent
         if (randomPercentage < data.Statistics.HitRate)
         {
             Debug.Log(data.name + " had a banger!");
-<<<<<<< HEAD
-            // Testing purposes
-            emailManager.GeneratedEmail(positiveEmail);
-            // End testing
-            return true;
-        } 
-        Debug.Log(data.name + " flopped...");
-        emailManager.GeneratedEmail(negativeEmail);
-        return false;
-=======
+
             TriggerPayout();
+            emailManager.GeneratedEmail(emailManager.positiveEmail);
+            // End testing
             return;
         } 
+        
         Debug.Log(data.name + " flopped...");
->>>>>>> e7386c4d8032245e8b65d21a2b5faebd5798c25a
+        emailManager.GeneratedEmail(emailManager.negativeEmail);
     }
+    
 
     public void TriggerPayout()
     {

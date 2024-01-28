@@ -13,12 +13,10 @@ public class Clock : MonoBehaviour
 
     private int HoursPassed = 9;
 
-<<<<<<< HEAD
+
     public int AllHours = 0;
     private EmailManager emailManager;
-=======
     public Animator TransitionAnimator;
->>>>>>> e7386c4d8032245e8b65d21a2b5faebd5798c25a
     // Start is called before the first frame update
     void Start()
     {
