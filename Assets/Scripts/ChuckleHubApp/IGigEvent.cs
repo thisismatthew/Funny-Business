@@ -5,6 +5,5 @@ using UnityEngine;
 
 public interface IGigEvent
 {
-    public bool CheckRequirements(ComedianData data);
-    public void TriggerEvent();
+    public void RunEvent(ComedianData data);
 }

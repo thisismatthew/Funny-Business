@@ -34,15 +34,15 @@ public class RosterPanel : MonoBehaviour
 
     public void UpdateGigCountdown()
     {
-        gigCountDown--;
-        if (gigCountDown < 0) gigCountDown = currentLoadedComic.Statistics.GigSpeedDays;
         GigCountDown.text = "<wave>" + gigCountDown + " days until ready to perform.";
         if (gigCountDown == 0)
         {
+            GigCountDown.text = "Book Me A Gig!";
             BookGig.interactable = true;
         }
         else
         {
+            gigCountDown--;
             BookGig.interactable = false;
         }
     }
@@ -50,13 +50,15 @@ public class RosterPanel : MonoBehaviour
     public void BookComedianOnGig()
     {
         OnGig = true;
+        gigCountDown = currentLoadedComic.Statistics.GigSpeedDays;
         BookGig.interactable = false;
         GigCountDown.text = "<wave> Getting Ready For Gig!";
+        ChuckleHubManager.Instance.SendOnGig(currentLoadedComic);
     }
 
     public void CheckComedian()
     {
-        FindObjectOfType<ChuckleHubManager>().CheckRosteredComic(currentLoadedComic);
+        ChuckleHubManager.Instance.CheckRosteredComic(currentLoadedComic);
     }
     // Update is called once per frame
     void Update()

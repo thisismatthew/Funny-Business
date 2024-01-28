@@ -6,23 +6,24 @@ public class E_GigPaysOut : MonoBehaviour, IGigEvent
 {
     private ComedianData activeData;
     
-    public bool CheckRequirements(ComedianData data)
+    public void RunEvent(ComedianData data)
     {
         activeData = data;
-        int randomPercentage = Random.Range(1, 100);
+        int randomPercentage = Random.Range(1, 5);
         if (randomPercentage < data.Statistics.HitRate)
         {
             Debug.Log(data.name + " had a banger!");
-            return true;
+            TriggerPayout();
+            return;
         } 
         Debug.Log(data.name + " flopped...");
-        return false;
     }
 
-    public void TriggerEvent()
+    public void TriggerPayout()
     {
-        int payout = activeData.Statistics.Buzz * Random.Range(1, 10);
+        int payout = activeData.Statistics.Buzz * Random.Range(5, 25);
         Debug.Log(activeData.name + " got paid $" + payout);
-        
+        FindObjectOfType<BankApp>().money += payout;
+
     }
 }

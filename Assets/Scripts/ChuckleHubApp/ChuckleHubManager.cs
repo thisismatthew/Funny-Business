@@ -8,7 +8,7 @@ public class ChuckleHubManager : MonoBehaviour
 {
     public List<ComedianData> ComedyScene;
     private List<ComedianData> AvailableToHire = new List<ComedianData>(), OnRoster = new List<ComedianData>();
-    public List<IGigEvent> GigEvents;
+    public IGigEvent[] GigEvents;
     public List<ProfileDisplay> AvailableHireWindows;
 
 
@@ -17,6 +17,31 @@ public class ChuckleHubManager : MonoBehaviour
     public Window OverBooked;
 
 
+    public static ChuckleHubManager Instance { get; private set; }
+    private void Awake() 
+    { 
+        // If there is an instance, and it's not me, delete myself.
+    
+        if (Instance != null && Instance != this) 
+        { 
+            Destroy(this); 
+        } 
+        else 
+        { 
+            Instance = this; 
+        }
+
+        GigEvents = GetComponents<IGigEvent>();
+    }
+    
+    public void SendOnGig(ComedianData data)
+    {
+        foreach (var comedian in OnRoster)
+        {
+            if (comedian.Name == data.Name)
+                comedian.onGig = true;
+        }
+    }
     private void Start()
     {
         RefreshHireAvails();
@@ -35,7 +60,6 @@ public class ChuckleHubManager : MonoBehaviour
 
         for (int i = 0; i < hiresAvailable; i++)
         {
-            Debug.Log(i);
             AvailableHireWindows[i].LoadInComdian(AvailableToHire[i]);
         }
     }
@@ -55,6 +79,7 @@ public class ChuckleHubManager : MonoBehaviour
 
     public void AddToRoster(ComedianData data)
     {
+        data.hired = true;
         if (OnRoster.Count==RosterPanels.Count)
         {
             OverBooked.OpenWindow(); 
@@ -76,6 +101,7 @@ public class ChuckleHubManager : MonoBehaviour
 
     public void RemoveFromRoster(ComedianData data)
     {
+        data.hired = false;
         foreach (var panel in RosterPanels)
         {
             if (panel.Name.text == data.Name)
@@ -103,16 +129,19 @@ public class ChuckleHubManager : MonoBehaviour
                 panel.UpdateGigCountdown();
             }
         }
-        /*foreach (var gigEvent in GigEvents)
+        foreach (var gigEvent in GigEvents)
         {
             foreach (var comedian in OnRoster)
             {
-                if (gigEvent.CheckRequirements(comedian))
+                //OK so Gig events now ONLY proc if your comedian has been sent out on a gig.
+                if (comedian.onGig)
                 {
-                    gigEvent.TriggerEvent();
+                    gigEvent.RunEvent(comedian);
                 }
+
+                comedian.onGig = false;
             }
-        }*/
+        }
     }
     
     

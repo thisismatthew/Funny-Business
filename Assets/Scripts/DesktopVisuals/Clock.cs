@@ -26,7 +26,7 @@ public class Clock : MonoBehaviour
             HoursPassed++;
             if (HoursPassed > 17)
             {
-                FindObjectOfType<ChuckleHubManager>().EndDay();
+                ChuckleHubManager.Instance.EndDay();
                 HoursPassed = 9;
             }
 
