@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ChuckleHubManager : MonoBehaviour
@@ -9,6 +10,11 @@ public class ChuckleHubManager : MonoBehaviour
     private List<ComedianData> AvailableToHire = new List<ComedianData>(), OnRoster = new List<ComedianData>();
     public List<IGigEvent> GigEvents;
     public List<ProfileDisplay> AvailableHireWindows;
+
+
+    private int RosterIndex = 0;
+    public List<RosterPanel> RosterPanels;
+    public Window OverBooked;
 
 
     private void Start()
@@ -49,13 +55,55 @@ public class ChuckleHubManager : MonoBehaviour
 
     public void AddToRoster(ComedianData data)
     {
+        if (OnRoster.Count==RosterPanels.Count)
+        {
+            OverBooked.OpenWindow(); 
+            return;
+        }
+
+        foreach (var panel in RosterPanels)
+        {
+            if (!panel.gameObject.activeSelf)
+            {
+                panel.gameObject.SetActive(true);
+                panel.LoadNewComic(data);
+                break;
+            }
+        }
         OnRoster.Add(data);
         AvailableToHire.Remove(data);
     }
 
+    public void RemoveFromRoster(ComedianData data)
+    {
+        foreach (var panel in RosterPanels)
+        {
+            if (panel.Name.text == data.Name)
+            {
+                panel.gameObject.SetActive(false);
+                break;
+            }
+        }
+
+        OnRoster.Remove(data);
+        //Do we add the comic back to the avail to hire? maybe thats an event...
+    }
+
+    public void CheckRosteredComic(ComedianData data)
+    {
+        AvailableHireWindows[0].LoadInComdian(data, true);
+    }
+
     public void EndDay()
     {
-        foreach (var gigEvent in GigEvents)
+        foreach (var panel in RosterPanels)
+        {
+            if (panel.gameObject.activeSelf)
+            {
+                panel.UpdateGigCountdown();
+            }
+        }
+        /*foreach (var gigEvent in GigEvents)
         {
             foreach (var comedian in OnRoster)
             {
@@ -64,7 +112,7 @@ public class ChuckleHubManager : MonoBehaviour
                     gigEvent.TriggerEvent();
                 }
             }
-        }
+        }*/
     }
     
     
