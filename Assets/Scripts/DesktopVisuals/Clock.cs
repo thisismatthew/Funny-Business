@@ -37,10 +37,11 @@ public class Clock : MonoBehaviour
             dayOfWeek = day % 7;
             if (HoursPassed > 17)
             {
+                Debug.Log(gameObject.name);
                 TransitionAnimator.Play("ShutDown");
                 ChuckleHubManager.Instance.EndDay();
                 HoursPassed = 9;
-                Debug.Log($"Today is {DayofWeekName()}");
+                Debug.Log($"Today is {DayOfWeekName()}");
             }
 
             emailManager.RefreshEmails();

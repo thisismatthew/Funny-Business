@@ -17,10 +17,10 @@ MonoBehaviour:
   Portrait: {fileID: 21300000, guid: 4032246ecd6e8b841a5c77b6468cc551, type: 3}
   Statistics:
     GigSpeedDays: 1
-    HitRate: 1
-    Probo: 1
-    SelfObsession: 1
-    Buzz: 1
+    HitRate: 5
+    Probo: 5
+    SelfObsession: 5
+    Buzz: 5
     HitRatePhrase:
     - Always Bombs
     - For a VERY Niche Crowd
@@ -45,3 +45,5 @@ MonoBehaviour:
     - On Panel Shows
     - Famous, Baby!
     - PM Uses For Clout
+  hired: 0
+  onGig: 0

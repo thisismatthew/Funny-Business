@@ -30,19 +30,24 @@ public class RosterPanel : MonoBehaviour
         Name.text = data.Name;
         gigCountDown = data.Statistics.GigSpeedDays;
         GigCountDown.text = "<wave>" + gigCountDown + " days until ready to perform.";
+        if (gigCountDown == 0)
+        {
+            GigCountDown.text = "Book Me A Gig!";
+            BookGig.interactable = true;
+        }
     }
 
     public void UpdateGigCountdown()
     {
+        gigCountDown--;
         GigCountDown.text = "<wave>" + gigCountDown + " days until ready to perform.";
-        if (gigCountDown == 0)
+        if (gigCountDown <= 0)
         {
             GigCountDown.text = "Book Me A Gig!";
             BookGig.interactable = true;
         }
         else
         {
-            gigCountDown--;
             BookGig.interactable = false;
         }
     }

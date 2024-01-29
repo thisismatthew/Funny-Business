@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ public class ChuckleHubManager : MonoBehaviour
 {
     public List<ComedianData> ComedyScene;
     private List<ComedianData> AvailableToHire = new List<ComedianData>(), OnRoster = new List<ComedianData>();
-    public IGigEvent[] GigEvents;
+    private IGigEvent[] GigEvents;
     public List<ProfileDisplay> AvailableHireWindows;
 
 
@@ -16,7 +17,16 @@ public class ChuckleHubManager : MonoBehaviour
     public List<RosterPanel> RosterPanels;
     public Window OverBooked;
 
+    public TextMeshProUGUI GigSummary;
+    public string currentGigSummaryText;
 
+    public void AddToGigSummary(string summaryAddition)
+    {
+        if (currentGigSummaryText == "") 
+            currentGigSummaryText = "- " + summaryAddition;
+        else
+            currentGigSummaryText += "\n- " + summaryAddition;
+    }
     public static ChuckleHubManager Instance { get; private set; }
     private void Awake() 
     { 
@@ -42,11 +52,30 @@ public class ChuckleHubManager : MonoBehaviour
                 comedian.onGig = true;
         }
     }
+
+    public void UpdateComic(ComedianData data)
+    {
+        foreach (var comedian in OnRoster)
+        {
+            if (comedian.Name == data.Name)
+                comedian.Statistics = data.Statistics;
+        }
+        foreach (var panel in RosterPanels)
+        {
+            if (panel.Name.text == data.Name)
+            {
+                panel.LoadNewComic(data);
+            }
+                
+        }
+    }
     private void Start()
     {
         RefreshHireAvails();
         foreach (var comedian in ComedyScene)
         {
+            comedian.hired = false;
+            comedian.onGig = false;
             AvailableToHire.Add(comedian);
         }
     }
@@ -129,12 +158,13 @@ public class ChuckleHubManager : MonoBehaviour
                 panel.UpdateGigCountdown();
             }
         }
-        foreach (var gigEvent in GigEvents)
+
+        foreach (var comedian in OnRoster)
         {
-            foreach (var comedian in OnRoster)
+            //OK so Gig events now ONLY proc if your comedian has been sent out on a gig.
+            if (comedian.onGig)
             {
-                //OK so Gig events now ONLY proc if your comedian has been sent out on a gig.
-                if (comedian.onGig)
+                foreach (var gigEvent in GigEvents)
                 {
                     gigEvent.RunEvent(comedian);
                 }
@@ -142,6 +172,9 @@ public class ChuckleHubManager : MonoBehaviour
                 comedian.onGig = false;
             }
         }
+            if (currentGigSummaryText == "") currentGigSummaryText = "- no one performed...";
+        GigSummary.text = currentGigSummaryText;
+        currentGigSummaryText = "";
     }
     
     

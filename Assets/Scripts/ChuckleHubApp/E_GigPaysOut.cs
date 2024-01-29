@@ -11,11 +11,9 @@ public class E_GigPaysOut : MonoBehaviour, IGigEvent
         // For testing
         var emailManager = GameObject.Find("Window - Email App").GetComponent<EmailManager>();
         activeData = data;
-        int randomPercentage = Random.Range(1, 5);
+        int randomPercentage = Random.Range(0, 4);
         if (randomPercentage < data.Statistics.HitRate)
         {
-            Debug.Log(data.name + " had a banger!");
-
             TriggerPayout();
             emailManager.GeneratedEmail(emailManager.positiveEmail);
             emailManager.RefreshEmails();
@@ -23,7 +21,7 @@ public class E_GigPaysOut : MonoBehaviour, IGigEvent
             return;
         } 
         
-        Debug.Log(data.name + " flopped...");
+        ChuckleHubManager.Instance.AddToGigSummary(data.name + " flopped...");
         emailManager.GeneratedEmail(emailManager.negativeEmail);
         emailManager.RefreshEmails();
     }   
@@ -32,14 +30,15 @@ public class E_GigPaysOut : MonoBehaviour, IGigEvent
     public void TriggerPayout()
     {
         int payout = activeData.Statistics.Buzz * Random.Range(5, 25);
-        Debug.Log(activeData.name + " got paid $" + payout);
+        ChuckleHubManager.Instance.AddToGigSummary(activeData.name + " had a banger! They earned you a cut of $" + payout);
         FindObjectOfType<BankApp>().money += payout;
 
     }
 
+    //TODO make these a little more bespoke
     Dictionary<string, string> positiveEmail = new Dictionary<string, string>
     {
-        ["from"] = "jane.doe@example.com",
+        ["from"] = "Bonk.Donson@comedyenjoyer.com",
         ["subject"] = "A Night to Remember - Thank You for the Laughter!",
         ["body"] = @"
     Dear Comedy Show Team,
@@ -53,7 +52,7 @@ public class E_GigPaysOut : MonoBehaviour, IGigEvent
     Thank you again for a wonderful night. I can't wait to see what you have in store for your next show, and rest assured, I'll be there, front and center!
 
     Warm regards,
-    Jane Doe"
+    Bonk"
     };
 
     Dictionary<string, string> negativeEmail = new Dictionary<string, string>

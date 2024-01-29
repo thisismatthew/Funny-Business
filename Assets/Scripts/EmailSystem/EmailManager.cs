@@ -61,7 +61,7 @@ Sent: {emailCsv["msgtime"][idIndex]}
 To: Manager
 Subject: {emailCsv["subject"][idIndex]}
 
-{emailCsv["body"][idIndex]}
+{emailCsv["body"][idIndex]} 
     ";
 
         email_text.text = tmp_text;
