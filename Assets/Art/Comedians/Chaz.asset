@@ -16,11 +16,11 @@ MonoBehaviour:
   Bio: 'Goal: to be on Have You Been Watching The News Heaps Lately?'
   Portrait: {fileID: 21300000, guid: ab4ca703f62cd7c4f84ca57177fefe12, type: 3}
   Statistics:
-    GigSpeedDays: 2
-    HitRate: 1
-    Probo: 3
+    GigSpeedDays: 1
+    HitRate: 2
+    Probo: 2
     SelfObsession: 3
-    Buzz: 2
+    Buzz: 1
     HitRatePhrase:
     - Always Bombs
     - For a VERY Niche Crowd

@@ -24,6 +24,7 @@ public class Window : MonoBehaviour
     
     public void OpenWindow()
     {
+        transform.SetAsLastSibling();
         isOpen = true;
         transform.position = OpenPosition;
         transform.DOScale(1, 0.2f);

@@ -8,9 +8,11 @@ using UnityEngine;
 public class ChuckleHubManager : MonoBehaviour
 {
     public List<ComedianData> ComedyScene;
-    private List<ComedianData> AvailableToHire = new List<ComedianData>(), OnRoster = new List<ComedianData>();
+    private List<ComedianData> AvailableToHire = new List<ComedianData>();
+    public List<ComedianData> OnRoster = new List<ComedianData>();
     private IGigEvent[] GigEvents;
     public List<ProfileDisplay> AvailableHireWindows;
+    private List<Stats> originalStats = new List<Stats>();
 
 
     private int RosterIndex = 0;
@@ -18,6 +20,7 @@ public class ChuckleHubManager : MonoBehaviour
     public Window OverBooked;
 
     public TextMeshProUGUI GigSummary;
+    public Window GigSummaryWindow;
     public string currentGigSummaryText;
 
     public void AddToGigSummary(string summaryAddition)
@@ -43,7 +46,30 @@ public class ChuckleHubManager : MonoBehaviour
 
         GigEvents = GetComponents<IGigEvent>();
     }
-    
+    private void Start()
+    {
+        
+        RefreshHireAvails();
+        foreach (var comedian in ComedyScene)
+        {
+            Stats statCopy = new Stats();
+            statCopy.Buzz = comedian.Statistics.Buzz;
+            statCopy.HitRate = comedian.Statistics.HitRate;
+            statCopy.Probo = comedian.Statistics.Probo;
+            statCopy.SelfObsession = comedian.Statistics.SelfObsession;
+            statCopy.GigSpeedDays = comedian.Statistics.GigSpeedDays;
+            originalStats.Add(statCopy);
+            comedian.hired = false;
+            comedian.onGig = false;
+            AvailableToHire.Add(comedian);
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        SetOGStatsBack();
+    }
+
     public void SendOnGig(ComedianData data)
     {
         foreach (var comedian in OnRoster)
@@ -67,16 +93,6 @@ public class ChuckleHubManager : MonoBehaviour
                 panel.LoadNewComic(data);
             }
                 
-        }
-    }
-    private void Start()
-    {
-        RefreshHireAvails();
-        foreach (var comedian in ComedyScene)
-        {
-            comedian.hired = false;
-            comedian.onGig = false;
-            AvailableToHire.Add(comedian);
         }
     }
 
@@ -172,10 +188,18 @@ public class ChuckleHubManager : MonoBehaviour
                 comedian.onGig = false;
             }
         }
-            if (currentGigSummaryText == "") currentGigSummaryText = "- no one performed...";
+        if (currentGigSummaryText == "") currentGigSummaryText = "- no one performed...";
         GigSummary.text = currentGigSummaryText;
         currentGigSummaryText = "";
+        GigSummaryWindow.OpenWindow();
     }
-    
-    
+
+    public void SetOGStatsBack()
+    {
+
+        for (int i = 0; i < originalStats.Count - 1; i++)
+        {
+            ComedyScene[i].Statistics = originalStats[i];
+        }
+    }
 }
