@@ -1,4 +1,3 @@
-using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
 using System.Collections.Generic;
@@ -12,7 +11,7 @@ public class EmailManager : MonoBehaviour
     public static EmailManager Instance { get; private set; }
     public TextMeshProUGUI email_text;
     public GameObject emailDisplay;
-    public Image emailBckground;
+    //public Image emailBckground;
     public string CurrentId;
     public Transform contentTransform;
     private Dictionary<string, List<string>> emailCsv;
