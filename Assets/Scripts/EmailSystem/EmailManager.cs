@@ -15,6 +15,7 @@ public class EmailManager : MonoBehaviour
     public string CurrentId;
     public Transform contentTransform;
     private Dictionary<string, List<string>> emailCsv;
+    public TextAsset emailTextAsset;
     int numberOfRows;
     private Clock clock;
 
@@ -25,7 +26,7 @@ public class EmailManager : MonoBehaviour
 
         // Load in the premade emails
         email_text.text = "";
-        emailCsv = TSVReader.ReadTSV("fbemails.txt");
+        emailCsv = TSVReader.ReadTSV(emailTextAsset);
         numberOfRows = emailCsv.First().Value.Count;
         emailCsv["loadedAlready"] = Enumerable.Repeat("FALSE", numberOfRows).ToList();
 

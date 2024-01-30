@@ -6593,6 +6593,7 @@ MonoBehaviour:
   emailDisplay: {fileID: 2158650342646069243, guid: f53b03ff8c84d4a65a40b71f5360933d, type: 3}
   CurrentId: 
   contentTransform: {fileID: 1461538084}
+  emailTextAsset: {fileID: 4900000, guid: 147f9574e9c10864fa064bc68bbeea8b, type: 3}
 --- !u!1 &863739839
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,13 +3,17 @@ using System.IO;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class TSVReader
 {
-    public static Dictionary<string, List<string>> ReadTSV(string filePath)
+    
+    public static Dictionary<string, List<string>> ReadTSV(TextAsset emailTextAsset)
     {
+
+        TextAsset rawEmailString;
         var data = new Dictionary<string, List<string>>();
-        using (var reader = new StreamReader(filePath))
+        using (var reader = new StreamReader(GenerateStreamFromString(emailTextAsset.text)))
         {
             string headerLine = reader.ReadLine();
             if (headerLine == null)
@@ -70,5 +74,15 @@ public class TSVReader
             return input.Substring(1, input.Length - 2).Replace("\"\"", "\"");
         }
         return input;
+    }
+    
+    public static Stream GenerateStreamFromString(string s)
+    {
+        var stream = new MemoryStream();
+        var writer = new StreamWriter(stream);
+        writer.Write(s);
+        writer.Flush();
+        stream.Position = 0;
+        return stream;
     }
 }

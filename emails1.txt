@@ -1,6 +1,0 @@
-id	from	subject	msgtime	body	conditions
-a	Cameron Brown	Event Invitation	23:22	Confirming your interview for the developer position on <b>Monday at 10 AM</b>.	TRUE
-b	Jordan Davis	Invoice Details	7:36	Attached is the invoice for the services rendered this month.	FALSE
-c	Reese Smith	Event Invitation	7:57	The quarterly report is ready for review. Please provide your feedback.	FALSE
-d	Alex Davis	Quarterly Report	7:32	Please find attached the details of the meeting scheduled for next week.	TRUE
-e	Jamie Miller	Invoice Details	23:27	We'd appreciate your feedback on our services. Here's a quick survey.	TRUE
