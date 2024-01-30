@@ -1515,10 +1515,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComedyScene:
-  - {fileID: 11400000, guid: 511b25db1cf87054bb2d563b0020f111, type: 2}
+  - {fileID: 11400000, guid: eefaf6a55f9ea2649aec9ebef8d649f0, type: 2}
   - {fileID: 11400000, guid: 78911b37f46fec24ea8ca620d44118c0, type: 2}
+  - {fileID: 11400000, guid: 511b25db1cf87054bb2d563b0020f111, type: 2}
+  - {fileID: 11400000, guid: f179459bee619234abafa85e524688d1, type: 2}
+  - {fileID: 11400000, guid: 9a5ffd8084e49354e8eec1962072e841, type: 2}
+  - {fileID: 11400000, guid: baebe7b579019e84293ce37032090bf4, type: 2}
+  - {fileID: 11400000, guid: 912e849cf7793644fac3ff36899fff0e, type: 2}
+  - {fileID: 11400000, guid: 34eac3140fc22b3489393c573581c53f, type: 2}
   - {fileID: 11400000, guid: f3088cb4f42972841ace627611313005, type: 2}
   - {fileID: 11400000, guid: d87ade417da9453488861870713dcedf, type: 2}
+  - {fileID: 11400000, guid: be4332aa1fc032548af488394c458480, type: 2}
   OnRoster: []
   AvailableHireWindows:
   - {fileID: 916097620744479892}
@@ -16571,7 +16578,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab4ca703f62cd7c4f84ca57177fefe12, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa8a20caaa219614a8975a9f73adba40, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

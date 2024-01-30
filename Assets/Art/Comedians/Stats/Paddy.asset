@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3825808bf848d3e4da46e7412117c594, type: 3}
+  m_Name: Paddy
+  m_EditorClassIdentifier: 
+  Name: Paddy
+  Bio: 'Goal: Cop a root.'
+  Portrait: {fileID: 21300000, guid: a47b583fc981c5e4cb25fd4684554e6d, type: 3}
+  Statistics:
+    GigSpeedDays: 0
+    HitRate: 3
+    Probo: 5
+    SelfObsession: 4
+    Buzz: 2
+    HitRatePhrase:
+    - Always Bombs
+    - For a VERY Niche Crowd
+    - Pretty Funny Actually
+    - 90% Bangers
+    - Never Misses
+    ProbboPhrases:
+    - Your Mum Would Love
+    - All Smooth, No Edge
+    - M 15+
+    - Offends Particular Groups
+    - Banned From All Socials
+    SelfObsessedPhrases:
+    - Lowest Self-Esteem
+    - Believes in Themselves
+    - Googles Themselves
+    - Clinical Grade Narcissist
+    - Starting a Cult
+    BuzzPhrases:
+    - Underground
+    - Up and Coming
+    - On Panel Shows
+    - Famous, Baby!
+    - PM Uses For Clout
+  hired: 0
+  onGig: 0
