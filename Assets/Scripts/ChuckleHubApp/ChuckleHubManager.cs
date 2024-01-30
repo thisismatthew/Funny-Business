@@ -13,7 +13,7 @@ public class ChuckleHubManager : MonoBehaviour
     private IGigEvent[] GigEvents;
     public List<ProfileDisplay> AvailableHireWindows;
     private List<Stats> originalStats = new List<Stats>();
-
+    public List<ComedianData> FlagForRemovalAtEOD = new List<ComedianData>();
 
     private int RosterIndex = 0;
     public List<RosterPanel> RosterPanels;
@@ -48,7 +48,7 @@ public class ChuckleHubManager : MonoBehaviour
     }
     private void Start()
     {
-        
+        Debug.Log("MATT: chuckle Awake on " + gameObject.name);
         RefreshHireAvails();
         foreach (var comedian in ComedyScene)
         {
@@ -125,6 +125,7 @@ public class ChuckleHubManager : MonoBehaviour
     public void AddToRoster(ComedianData data)
     {
         data.hired = true;
+        data.offended = false;
         if (OnRoster.Count==RosterPanels.Count)
         {
             OverBooked.OpenWindow(); 
@@ -160,6 +161,8 @@ public class ChuckleHubManager : MonoBehaviour
         //Do we add the comic back to the avail to hire? maybe thats an event...
     }
 
+
+
     public void CheckRosteredComic(ComedianData data)
     {
         AvailableHireWindows[0].LoadInComdian(data, true);
@@ -178,20 +181,31 @@ public class ChuckleHubManager : MonoBehaviour
         foreach (var comedian in OnRoster)
         {
             //OK so Gig events now ONLY proc if your comedian has been sent out on a gig.
+            
             if (comedian.onGig)
             {
+                Debug.Log("MATT: " + comedian.name + " went to a gig");
                 foreach (var gigEvent in GigEvents)
                 {
+                    Debug.Log("event action");
                     gigEvent.RunEvent(comedian);
                 }
 
                 comedian.onGig = false;
             }
         }
+
+        foreach (var comic in FlagForRemovalAtEOD)
+        {
+            RemoveFromRoster(comic);
+        }
+        FlagForRemovalAtEOD.Clear();
+        
         if (currentGigSummaryText == "") currentGigSummaryText = "- no one performed...";
         GigSummary.text = currentGigSummaryText;
         currentGigSummaryText = "";
         GigSummaryWindow.OpenWindow();
+        
     }
 
     public void SetOGStatsBack()

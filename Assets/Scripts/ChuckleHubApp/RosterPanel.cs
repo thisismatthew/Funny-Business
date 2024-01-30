@@ -39,6 +39,10 @@ public class RosterPanel : MonoBehaviour
 
     public void UpdateGigCountdown()
     {
+        //Todo find all the bugs happening here lol
+        
+        if (currentLoadedComic.onGig) return;
+        
         gigCountDown--;
         GigCountDown.text = "<wave>" + gigCountDown + " days until ready to perform.";
         if (gigCountDown <= 0)

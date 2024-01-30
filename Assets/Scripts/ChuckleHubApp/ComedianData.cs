@@ -61,6 +61,7 @@ public class ComedianData : ScriptableObject
     public Stats Statistics;
     public bool hired;
     public bool onGig;
+    public bool offended = false;
 }
 
 

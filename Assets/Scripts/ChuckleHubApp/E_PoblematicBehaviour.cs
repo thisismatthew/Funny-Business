@@ -16,9 +16,10 @@ public class E_PoblematicBehaviour : MonoBehaviour, IGigEvent
             {
                 if (otherComic.name != data.name)
                 {
-                    if (otherComic.Statistics.SelfObsession > 2)
+                    if (otherComic.Statistics.SelfObsession > 2 && !otherComic.offended)
                     {
-                        ChuckleHubManager.Instance.RemoveFromRoster(otherComic);
+                        otherComic.offended = true;
+                        ChuckleHubManager.Instance.FlagForRemovalAtEOD.Add(otherComic);
                         ChuckleHubManager.Instance.AddToGigSummary(data.name + " offended " + otherComic.name + " so deeply they have dropped you as a manager.");
                     }
                     else if (otherComic.Statistics.Probo > 2)
