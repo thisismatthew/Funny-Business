@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Febucci.UI;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -19,7 +20,7 @@ public class ChuckleHubManager : MonoBehaviour
     public List<RosterPanel> RosterPanels;
     public Window OverBooked;
 
-    public TextMeshProUGUI GigSummary;
+    public TypewriterByCharacter GigSummary;
     public Window GigSummaryWindow;
     public string currentGigSummaryText;
 
@@ -202,10 +203,16 @@ public class ChuckleHubManager : MonoBehaviour
         FlagForRemovalAtEOD.Clear();
         
         if (currentGigSummaryText == "") currentGigSummaryText = "- no one performed...";
-        GigSummary.text = currentGigSummaryText;
-        currentGigSummaryText = "";
-        GigSummaryWindow.OpenWindow();
         
+        Invoke("DelayShowGigSummary", 6f);
+        
+    }
+
+    public void DelayShowGigSummary()
+    {
+        GigSummaryWindow.OpenWindow();
+        GigSummary.ShowText(currentGigSummaryText);
+        currentGigSummaryText = "";
     }
 
     public void SetOGStatsBack()

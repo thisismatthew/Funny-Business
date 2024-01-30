@@ -1531,13 +1531,14 @@ MonoBehaviour:
   - {fileID: 916097620744479892}
   - {fileID: 576168588}
   - {fileID: 1850596161}
+  FlagForRemovalAtEOD: []
   RosterPanels:
   - {fileID: 1990531612}
   - {fileID: 1508684969}
   - {fileID: 268553275}
   - {fileID: 1830169293}
   OverBooked: {fileID: 2564275132720364126}
-  GigSummary: {fileID: 1509152251}
+  GigSummary: {fileID: 1509152254}
   GigSummaryWindow: {fileID: 202108274}
   currentGigSummaryText: 
 --- !u!114 &199031344
@@ -1582,13 +1583,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1843978558}
-  - {fileID: 769231716}
   m_Father: {fileID: 1735135619}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 647.61, y: 113}
-  m_SizeDelta: {x: 691.08, y: 991.57}
+  m_AnchoredPosition: {x: 270.17, y: 135.58}
+  m_SizeDelta: {x: 1254.02, y: 938}
   m_Pivot: {x: 0.74252474, y: 0.6720653}
 --- !u!114 &202108274
 MonoBehaviour:
@@ -5841,7 +5841,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 202108273}
+    m_TransformParent: {fileID: 1843978558}
     m_Modifications:
     - target: {fileID: 1180174977724560317, guid: f204d5c63269049d8863aa899d8f31c0, type: 3}
       propertyPath: m_Type
@@ -5889,7 +5889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5565800402259219518, guid: f204d5c63269049d8863aa899d8f31c0, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 236.09
+      value: 1249
       objectReference: {fileID: 0}
     - target: {fileID: 5565800402259219518, guid: f204d5c63269049d8863aa899d8f31c0, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -11203,8 +11203,10 @@ GameObject:
   - component: {fileID: 1509152250}
   - component: {fileID: 1509152252}
   - component: {fileID: 1509152251}
+  - component: {fileID: 1509152253}
+  - component: {fileID: 1509152254}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text - summary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11226,7 +11228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.5799866, y: -86.02994}
+  m_AnchoredPosition: {x: -3.579956, y: -86.02991}
   m_SizeDelta: {x: -68.49, y: -225.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1509152251
@@ -11326,6 +11328,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509152249}
   m_CullTransparentMesh: 1
+--- !u!114 &1509152253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509152249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ace8ced0e81c847968cdca0aeda757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typewriterStartsAutomatically: 0
+  animationLoop: 0
+  timeScale: 0
+  _text: 
+  useDynamicScaling: 1
+  referenceFontSize: 10
+  isResettingTimeOnNewText: 1
+  useDefaultDatabases: 1
+  databaseBehaviors: {fileID: 0}
+  databaseAppearances: {fileID: 0}
+  useDefaultStyleSheet: 1
+  styleSheet: {fileID: 0}
+  databaseActions: {fileID: 0}
+  defaultAppearancesTags:
+  - size
+  defaultDisappearancesTags:
+  - fade
+  defaultBehaviorsTags: []
+  defaultTagsMode: 0
+--- !u!114 &1509152254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509152249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a6945b90dcd0c4b81619c0d8b5c283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useTypeWriter: 1
+  startTypewriterMode: 3
+  hideAppearancesOnSkip: 0
+  hideDisappearancesOnSkip: 0
+  triggerEventsOnSkip: 0
+  resetTypingSpeedAtStartup: 1
+  disappearanceOrientation: 0
+  onTextShowed:
+    m_PersistentCalls:
+      m_Calls: []
+  onTypewriterStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onTextDisappeared:
+    m_PersistentCalls:
+      m_Calls: []
+  onCharacterVisible:
+    m_PersistentCalls:
+      m_Calls: []
+  onMessage:
+    m_PersistentCalls:
+      m_Calls: []
+  waitForNormalChars: 0.03
+  waitLong: 0.6
+  waitMiddle: 0.2
+  avoidMultiplePunctuactionWait: 0
+  waitForNewLines: 1
+  waitForLastCharacter: 1
+  useTypewriterWaitForDisappearances: 1
+  disappearanceWaitTime: 0.015
+  disappearanceSpeedMultiplier: 1
 --- !u!1 &1530296061
 GameObject:
   m_ObjectHideFlags: 0
@@ -13658,6 +13734,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 769231716}
   - {fileID: 1509152250}
   - {fileID: 613127744}
   m_Father: {fileID: 202108273}
