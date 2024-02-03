@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using System;
+using UnityEngine.Serialization;
 
 public class Clock : MonoBehaviour
 {
-    public float HourTickTime = 5f;
+    [FormerlySerializedAs("HourTickTime")] public float TickTime = 5f;
 
     private float tickTimer = 0;
 
-    public TextMeshProUGUI TimeDisplay;
+    public TextMeshProUGUI TimeDisplay, DayDisplay;
 
     private int HoursPassed = 9;
+    private int QuarterHourPassed = 0;
+
+    private bool HourTickUp = false;
 
 
     public int AllHours = 0;
@@ -29,7 +33,18 @@ public class Clock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tickTimer >= HourTickTime)
+        if (tickTimer >= TickTime)
+        {
+            QuarterHourPassed++;
+            if (QuarterHourPassed >= 4)
+            {
+                HourTickUp = true;
+                QuarterHourPassed = 0;
+            }
+
+            tickTimer = 0;
+        }
+        if (HourTickUp)
         {
             HoursPassed++;
             AllHours++;
@@ -46,11 +61,12 @@ public class Clock : MonoBehaviour
 
             emailManager.RefreshEmails();
 
-            tickTimer = 0;
+            HourTickUp = false;
         }
 
         tickTimer += Time.deltaTime;
-        TimeDisplay.text = HoursPassed + ":00";
+        TimeDisplay.text = HoursPassed + ":" + (QuarterHourPassed * 15).ToString("D2");
+        DayDisplay.text = DayOfWeekName() + " " + day;
     }
 
     public string FormattedTime()
@@ -69,13 +85,13 @@ public class Clock : MonoBehaviour
     {
         switch(dayOfWeek)
         {
-            case 1: return "Monday";
-            case 2: return "Tuesday";
-            case 3: return "Wednesday";
-            case 4: return "Thursday";
-            case 5: return "Friday";
-            case 6: return "Saturday";
-            case 7: return "Sunday";
+            case 1: return "Mon";
+            case 2: return "Tue";
+            case 3: return "Wed";
+            case 4: return "Thu";
+            case 5: return "Fri";
+            case 6: return "Sat";
+            case 7: return "Sun";
             default: throw new Exception("Day number must be between 1 and 7.");
         }
     }
