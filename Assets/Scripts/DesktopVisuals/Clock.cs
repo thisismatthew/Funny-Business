@@ -30,6 +30,12 @@ public class Clock : MonoBehaviour
         emailManager = GameObject.Find("Window - Email App").GetComponent<EmailManager>();
     }
 
+    public void EndDayEarly()
+    {
+        TickTime = 0.1f;
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -57,6 +63,7 @@ public class Clock : MonoBehaviour
                 ChuckleHubManager.Instance.EndDay();
                 HoursPassed = 9;
                 Debug.Log($"Today is {DayOfWeekName()}");
+                TickTime = 4;
             }
 
             emailManager.RefreshEmails();

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InitialiseWindows : MonoBehaviour
 {
+    public Window WelcomeWindow;
     // Start is called before the first frame update
     void Start()
     {
@@ -11,6 +12,7 @@ public class InitialiseWindows : MonoBehaviour
         {
             window.CloseWindow();
         }
+        WelcomeWindow.OpenWindow();
     }
 
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RainbowBehavior
   m_EditorClassIdentifier: 
   tagID: rainb
-  baseFrequency: 0.5
+  baseFrequency: 0.1
   baseWaveSize: 0.08
