@@ -29,7 +29,7 @@ public class E_GigPaysOut : MonoBehaviour, IGigEvent
 
     public void TriggerPayout()
     {
-        int payout = activeData.Statistics.Buzz * Random.Range(5, 25);
+        int payout = activeData.Statistics.Buzz * Random.Range(20, 50);
         ChuckleHubManager.Instance.AddToGigSummary(activeData.name + " had a banger! They earned you a cut of $" + payout);
         FindObjectOfType<BankApp>().money += payout;
 

@@ -49,7 +49,7 @@ public class ChuckleHubManager : MonoBehaviour
     }
     private void Start()
     {
-        Debug.Log("MATT: chuckle Awake on " + gameObject.name);
+        //Debug.Log("MATT: chuckle Awake on " + gameObject.name);
         RefreshHireAvails();
         foreach (var comedian in ComedyScene)
         {
@@ -171,6 +171,7 @@ public class ChuckleHubManager : MonoBehaviour
 
     public void EndDay()
     {
+
         foreach (var panel in RosterPanels)
         {
             if (panel.gameObject.activeSelf)
@@ -178,17 +179,17 @@ public class ChuckleHubManager : MonoBehaviour
                 panel.UpdateGigCountdown();
             }
         }
-
+        
         foreach (var comedian in OnRoster)
         {
             //OK so Gig events now ONLY proc if your comedian has been sent out on a gig.
             
             if (comedian.onGig)
             {
-                Debug.Log("MATT: " + comedian.name + " went to a gig");
+                //Debug.Log("MATT: " + comedian.name + " went to a gig");
                 foreach (var gigEvent in GigEvents)
                 {
-                    Debug.Log("event action");
+                   // Debug.Log("event action");
                     gigEvent.RunEvent(comedian);
                 }
 
@@ -206,6 +207,7 @@ public class ChuckleHubManager : MonoBehaviour
         
         Invoke("DelayShowGigSummary", 6f);
         
+
     }
 
     public void DelayShowGigSummary()

@@ -7,7 +7,7 @@ public class E_SelfObsessed : MonoBehaviour, IGigEvent
     public int SelfObsessionChance;
     public void RunEvent(ComedianData data)
     {
-        Debug.Log("checking Self Obsession");
+        //Debug.Log("checking Self Obsession");
         int obsessionLikliness = data.Statistics.SelfObsession * 2;
         int random = Random.Range(1, SelfObsessionChance);
         if (obsessionLikliness > random)

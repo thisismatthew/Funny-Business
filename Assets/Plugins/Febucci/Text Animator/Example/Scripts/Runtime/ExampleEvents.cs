@@ -57,7 +57,7 @@ namespace Febucci.UI.Examples
                         }
                         else
                         {
-                            Debug.Log($"Sprite index was out of range. Dialogue: {dialogueIndex}");
+                            //Debug.Log($"Sprite index was out of range. Dialogue: {dialogueIndex}");
                         }
                     }
                     break;
@@ -65,7 +65,7 @@ namespace Febucci.UI.Examples
                 case "crate":
                     if (eventData.parameters.Length <= 0)
                     {
-                        Debug.LogWarning($"You need to specify a crate index! Dialogue: {dialogueIndex}");
+                       Debug.LogWarning($"You need to specify a crate index! Dialogue: {dialogueIndex}");
                         return;
                     }
 

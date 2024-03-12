@@ -170,14 +170,14 @@ Subject: {emailCsv["subject"][idIndex]}
         // Increment number of rows
         numberOfRows++;
 
-        Debug.Log("Run test");
-        Debug.Log($"New index {numberOfRows - 1}, total length {numberOfRows}.");
+        //Debug.Log("Run test");
+        //Debug.Log($"New index {numberOfRows - 1}, total length {numberOfRows}.");
 
-        Debug.Log($"New index {numberOfRows - 1}, total length {numberOfRows}.");
+        //Debug.Log($"New index {numberOfRows - 1}, total length {numberOfRows}.");
 
         foreach (KeyValuePair<string, List<string>> kvp in emailCsv)
         {
-            Debug.Log($"{kvp.Key}: ");
+           // Debug.Log($"{kvp.Key}: ");
         }
     }
 
