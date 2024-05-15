@@ -9,6 +9,7 @@ public class IconClickHandler : MonoBehaviour, IPointerClickHandler
     public TextMeshProUGUI txtFrom;
     public TextMeshProUGUI txtSubject;
     public TextMeshProUGUI txtTime;
+    public AudioSource audioSource;
     // public GameObject EmailManager = GameObject.FindWithTag("EmailManagers");
 
 
@@ -16,8 +17,9 @@ public class IconClickHandler : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        // Get the Button component attached to this GameObject
 
-        
         txtFrom.fontStyle = FontStyles.Underline | FontStyles.Bold;
         txtSubject.fontStyle = FontStyles.Underline | FontStyles.Bold;
         txtTime.fontStyle = FontStyles.Underline | FontStyles.Bold;
@@ -43,6 +45,12 @@ public class IconClickHandler : MonoBehaviour, IPointerClickHandler
     {
         EmailManager.Instance.SetEmailId(iconID);
         SetRead();
+        // Check if the AudioSource is not null and the audio clip is not playing
+        if (audioSource != null && !audioSource.isPlaying)
+        {
+            // Play the audio clip
+            audioSource.Play();
+        }
     }
 
     private void SetFocused()
