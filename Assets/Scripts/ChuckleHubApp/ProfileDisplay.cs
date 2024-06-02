@@ -28,10 +28,14 @@ public class ProfileDisplay : Window
         Name.text = comedian.Name;
         Bio.text = comedian.Bio;
         GigSpeed.text = "Gig Prep Time: " + comedian.Statistics.GigSpeedDays;
-        HitRate.text = "Hit Rate: " + comedian.Statistics.HitRatePhrase[comedian.Statistics.HitRate-1];
-        SelfObs.text = "Self Obsession: " + comedian.Statistics.SelfObsessedPhrases[comedian.Statistics.SelfObsession-1];
-        Probo.text = "How Probbo: " + comedian.Statistics.ProbboPhrases[comedian.Statistics.Probo-1];
-        Buzz.text = "Buzz: " + comedian.Statistics.BuzzPhrases[comedian.Statistics.Buzz-1];
+        HitRate.text = "Hit Rate: " + comedian.Statistics.HitRatePhrase[comedian.Statistics.HitRate - 1] + " (" +
+                       AddStars(comedian.Statistics.HitRate) + ")";
+        SelfObs.text = "Self Obsession: " + comedian.Statistics.SelfObsessedPhrases[comedian.Statistics.SelfObsession-1]+ " (" +
+                       AddStars(comedian.Statistics.SelfObsession) + ")";
+        Probo.text = "How Probbo: " + comedian.Statistics.ProbboPhrases[comedian.Statistics.Probo-1]+ " (" +
+                     AddStars(comedian.Statistics.Probo) + ")";
+        Buzz.text = "Buzz: " + comedian.Statistics.BuzzPhrases[comedian.Statistics.Buzz-1]+ " (" +
+                    AddStars(comedian.Statistics.Buzz) + ")";
         OpenWindow();
         
         
@@ -50,6 +54,18 @@ public class ProfileDisplay : Window
     {
         FindObjectOfType<ChuckleHubManager>().RemoveFromRoster(loadedComedian);
         CloseWindow();
+    }
+
+    public string AddStars(int num)
+    {
+        string ret = "";
+
+        for (int i = 0; i < num; i++)
+        {
+            ret += "★";
+        }
+
+        return ret;
     }
     
 }

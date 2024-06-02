@@ -96,7 +96,7 @@ public class ChuckleHubManager : MonoBehaviour
                 
         }
     }
-
+    
     public void OpenHireWindows()
     {
         int hiresAvailable = 0;

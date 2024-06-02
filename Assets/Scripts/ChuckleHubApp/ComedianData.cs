@@ -54,7 +54,7 @@ public class Stats
     }
 }
 [CreateAssetMenu(fileName = "Comedian", menuName = "Comedian Data", order = 1)]
-public class ComedianData : ScriptableObject 
+public class ComedianData : ScriptableObject
 {
     public string Name, Bio;
     public Sprite Portrait;
